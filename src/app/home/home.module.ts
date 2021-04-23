@@ -6,7 +6,7 @@ import { HomeComponent } from './components/home/home.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { ProductDetailPageComponent } from './components/product-detail-page/product-detail-page.component';
 import { SearchProductComponent } from './components/search-product/search-product.component';
-
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -17,7 +17,8 @@ import { SearchProductComponent } from './components/search-product/search-produ
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    MatCardModule
   ]
 })
 export class HomeModule { }

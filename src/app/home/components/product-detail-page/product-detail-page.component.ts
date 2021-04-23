@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-product-detail-page',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductDetailPageComponent implements OnInit {
 
-  constructor() { }
+  product: any;
 
-  ngOnInit(): void {
+  constructor(private readonly route: ActivatedRoute) { }
+
+  ngOnInit() {
+    this.route.data.subscribe(data => {
+      console.log(data);
+      this.product = data.product;
+    })
   }
 
 }

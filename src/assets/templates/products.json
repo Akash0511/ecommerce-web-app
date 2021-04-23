@@ -1,0 +1,38 @@
+[
+    {
+        "id": "1",
+        "name": "M31 Dual Sim Phone",
+        "brand": "Samsung",
+        "color": "Navy Blue",
+        "price": 15000,
+        "category": "Mobile",
+        "description": "",
+        "features": "",
+        "imgUrl": "",
+        "quantity": 4
+    },
+    {
+        "id": "2",
+        "name": "Moto G6 Plus Phone",
+        "brand": "Motorola",
+        "color": "Black",
+        "price": 20000,
+        "category": "Mobile",
+        "description": "",
+        "features": "",
+        "imgUrl": "",
+        "quantity": 5
+    },
+    {
+        "id": "3",
+        "name": "Moto G6 Plus Phone",
+        "brand": "Motorola",
+        "color": "Black",
+        "price": 20000,
+        "category": "Mobile",
+        "description": "",
+        "features": "",
+        "imgUrl": "",
+        "quantity": 5
+    }
+]

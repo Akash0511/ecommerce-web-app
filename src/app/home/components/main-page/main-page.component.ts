@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Product } from 'src/app/core/models/product';
 
 @Component({
   selector: 'app-main-page',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainPageComponent implements OnInit {
 
-  constructor() { }
+  products: Product[] = [];
 
-  ngOnInit(): void {
+  constructor(private readonly route: ActivatedRoute, private readonly router: Router) { }
+
+  ngOnInit() {
+    this.route.data.subscribe(data => {
+      this.products = data.productList;
+      console.log(this.products);
+    })
+  }
+
+  viewProductDetail(productId: string){
+    console.log(productId);
+    this.router.navigateByUrl('/home/product/' + productId);
   }
 
 }
