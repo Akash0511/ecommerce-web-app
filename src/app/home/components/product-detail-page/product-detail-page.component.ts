@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-detail-page',
@@ -10,13 +10,18 @@ export class ProductDetailPageComponent implements OnInit {
 
   product: any;
 
-  constructor(private readonly route: ActivatedRoute) { }
+  constructor(private readonly route: ActivatedRoute, private readonly router: Router) { }
 
   ngOnInit() {
     this.route.data.subscribe(data => {
       console.log(data);
       this.product = data.product;
     })
+  }
+
+  addToCart(productId : string){
+    // service call to add to cart, resolver
+    this.router.navigateByUrl('/order/cart');
   }
 
 }

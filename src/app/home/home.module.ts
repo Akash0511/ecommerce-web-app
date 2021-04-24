@@ -7,6 +7,7 @@ import { MainPageComponent } from './components/main-page/main-page.component';
 import { ProductDetailPageComponent } from './components/product-detail-page/product-detail-page.component';
 import { SearchProductComponent } from './components/search-product/search-product.component';
 import {MatCardModule} from '@angular/material/card';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {MatCardModule} from '@angular/material/card';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    MatCardModule
+    MatCardModule,
+    MatIconModule
   ]
 })
 export class HomeModule { }
