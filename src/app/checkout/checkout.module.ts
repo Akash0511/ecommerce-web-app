@@ -4,7 +4,8 @@ import { CommonModule } from '@angular/common';
 import { CheckoutRoutingModule } from './checkout-routing.module';
 import { CartComponent } from './components/cart/cart.component';
 import { PlaceOrderComponent } from './components/place-order/place-order.component';
-
+import {ReactiveFormsModule} from '@angular/forms';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,9 @@ import { PlaceOrderComponent } from './components/place-order/place-order.compon
   ],
   imports: [
     CommonModule,
-    CheckoutRoutingModule
+    CheckoutRoutingModule,
+    ReactiveFormsModule,
+    MatSnackBarModule
   ]
 })
 export class CheckoutModule { }
