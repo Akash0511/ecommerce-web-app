@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Router, RoutesRecognized } from '@angular/router';
+import { filter, pairwise } from 'rxjs/operators';
+import { NavigationService } from './core/services/navigation.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +10,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ecommerce-web-app';
+
+  constructor(private readonly navigationService: NavigationService, private readonly router: Router){}
+
+  ngOnInit(){
+    this.router.events
+    .pipe(filter((evt: any)=> evt instanceof RoutesRecognized),pairwise())
+    .subscribe((events: RoutesRecognized[])=>{
+      this.navigationService.setPreviousUrl(events[0].urlAfterRedirects);
+    });
+  }
 }

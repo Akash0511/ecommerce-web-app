@@ -16,12 +16,10 @@ export class MainPageComponent implements OnInit {
   ngOnInit() {
     this.route.data.subscribe(data => {
       this.products = data.productList;
-      console.log(this.products);
     })
   }
 
   viewProductDetail(productId: string){
-    console.log(productId);
     this.router.navigateByUrl('/home/product/' + productId);
   }
 

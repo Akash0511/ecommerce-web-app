@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/core/services/auth.service';
+import { CartService } from 'src/app/core/services/cart.service';
 
 @Component({
   selector: 'app-header',
@@ -9,9 +10,20 @@ import { AuthService } from 'src/app/core/services/auth.service';
 })
 export class HeaderComponent implements OnInit {
 
-  //isLoggedIn!: boolean;
+  isLoggedIn!: any;
+
+  cart: number = 0;
   
-  constructor(private authService: AuthService,private router: Router) { }
+  constructor(private readonly authService: AuthService,private readonly router: Router,
+    private readonly cartService: CartService) {
+    this.authService.isLoggedIn().subscribe(next =>{
+      this.isLoggedIn = next;
+    });
+
+    this.cartService.getCartData().subscribe(data => {
+      this.cart = data.length;
+    });
+  }
 
   ngOnInit(): void {
   }

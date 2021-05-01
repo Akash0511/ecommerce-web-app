@@ -9,7 +9,7 @@
             (ngSubmit)="onLogin()">
                 <div class="form-group">
                     <label for="user-name">Email</label>
-                    <input type="email" class="form-control" id="Email" formControlName="Email"
+                    <input type="email" class="form-control" id="email" formControlName="email"
                     [ngClass]="getControlValidationClasses(emailControl)">
                     <div class="invalid-feedback"
                             *ngIf="emailControl.touched && emailControl.errors?.required">
@@ -18,7 +18,7 @@
                 </div>
                 <div class="form-group">
                     <label for="password-control">Password</label>
-                    <input type="password" class="form-control" id="Password" formControlName="Password"
+                    <input type="password" class="form-control" id="password" formControlName="password"
                     [ngClass]="getControlValidationClasses(passwordControl)">
                     <div class="invalid-feedback"
                             *ngIf="passwordControl.touched && passwordControl.errors?.required">
