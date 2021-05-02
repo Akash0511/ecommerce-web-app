@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { AuthService } from 'src/app/core/services/auth.service';
 import { CartService } from 'src/app/core/services/cart.service';
 
@@ -13,10 +14,17 @@ export class HeaderComponent implements OnInit {
   isLoggedIn!: any;
 
   cart: number = 0;
-  
-  constructor(private readonly authService: AuthService,private readonly router: Router,
-    private readonly cartService: CartService) {
-    this.authService.isLoggedIn().subscribe(next =>{
+
+  constructor(private readonly authService: AuthService, private readonly router: Router,
+    private readonly cartService: CartService, public readonly translate: TranslateService) {
+
+    translate.addLangs(['en', 'hn']);
+    translate.setDefaultLang('en');
+
+    const browserLang = translate.getBrowserLang();
+    translate.use(browserLang.match(/en|hn/) ? browserLang : 'en');
+
+    this.authService.isLoggedIn().subscribe(next => {
       this.isLoggedIn = next;
     });
 
@@ -28,14 +36,16 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  login(){
-    // to maintain the state that from where user come for login
+  login() {
     this.router.navigateByUrl('/auth/login');
   }
 
-  logout(){
+  logout() {
     this.authService.logOut();
     this.router.navigateByUrl('/');
   }
 
+  changeLang(language: string){
+    this.translate.use(language);
+  }
 }

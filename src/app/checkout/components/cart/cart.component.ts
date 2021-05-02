@@ -53,4 +53,8 @@ export class CartComponent implements OnInit {
     this.getTotalPrice();
   }
 
+  goToCheckout(){
+    this.router.navigateByUrl('/order/checkout');
+  }
+
 }
