@@ -6,6 +6,7 @@ import { CartComponent } from './components/cart/cart.component';
 import { PlaceOrderComponent } from './components/place-order/place-order.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     CommonModule,
     CheckoutRoutingModule,
     ReactiveFormsModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatIconModule
   ]
 })
 export class CheckoutModule { }

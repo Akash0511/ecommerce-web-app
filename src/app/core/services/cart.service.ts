@@ -44,4 +44,8 @@ export class CartService {
     cartItems[index].quantity -= 1;
     this.cartDataSubject.next(cartItems);
   }
+
+  clearCart(){
+    this.cartDataSubject.next([]);
+  }
 }

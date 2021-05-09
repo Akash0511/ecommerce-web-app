@@ -1,8 +1,21 @@
-<div class="container">
+<div class="container orderDetails">
     <div class="card bg-light mb-3">
         <div class="card-header text-center">Order details</div>
         <div class="card-body">
-            
+            <ul class="list-group list-group-horizontal">
+                <li class="list-group-item col-md-5 head">Product</li>
+                <li class="list-group-item col-md-3 head">Quantity</li>
+                <li class="list-group-item col-md-4 head">Price</li>
+            </ul>
+            <ul class="list-group list-group-horizontal-sm" *ngFor="let product of products">
+                <li class="list-group-item col-md-5">{{product.product.name}}</li>
+                <li class="list-group-item col-md-3"><span class="badge badge-primary badge-pill">{{product.quantity}}</span></li>
+                <li class="list-group-item col-md-4">{{product.product.price * product.quantity}}</li>
+            </ul>
+            <ul class="list-group list-group-horizontal">
+                <li class="list-group-item col-md-8 head">Total</li>
+                <li class="list-group-item col-md-4 head">{{totalPrice}}</li>
+            </ul>
         </div>
     </div>
 </div>
@@ -67,16 +80,13 @@
                         <label for="phone">Phone</label>
                         <input type="text" class="form-control" id="phone" formControlName="phone"
                             [ngClass]="getControlValidationClasses(phoneControl)">
-                        <div class="invalid-feedback"
-                            *ngIf="phoneControl.touched && phoneControl.errors?.required">
+                        <div class="invalid-feedback" *ngIf="phoneControl.touched && phoneControl.errors?.required">
                             Please Enter your 10 digit phone number
                         </div>
-                        <div class="invalid-feedback"
-                            *ngIf="phoneControl.touched && phoneControl.errors?.maxlength">
+                        <div class="invalid-feedback" *ngIf="phoneControl.touched && phoneControl.errors?.maxlength">
                             not a valid phone number
                         </div>
-                        <div class="invalid-feedback"
-                            *ngIf="phoneControl.touched && phoneControl.errors?.minlength">
+                        <div class="invalid-feedback" *ngIf="phoneControl.touched && phoneControl.errors?.minlength">
                             not a valid phone number
                         </div>
                     </div>
@@ -90,7 +100,8 @@
                             <option>Credit card</option>
                             <option>Paytm</option>
                         </select>
-                        <div class="invalid-feedback" *ngIf="paymentModeControl.touched && paymentModeControl.errors?.required">
+                        <div class="invalid-feedback"
+                            *ngIf="paymentModeControl.touched && paymentModeControl.errors?.required">
                             Please select payment mode
                         </div>
                     </div>
@@ -149,9 +160,9 @@
                 </div>
                 <br>
                 <div style="text-align: center;padding: 3px;">
-                    <button type="submit" class="btn btn-primary" (click)="onFormSubmit()"
+                    <button type="submit" class="btn btn-success" (click)="onFormSubmit()"
                         [disabled]="!deliveryDetailsForm.valid">Place order</button>&nbsp;
-                    <button type="button" class="btn btn-primary" (click)="onCancelClicked()">Cancel</button>
+                    <button type="button" class="btn btn-warning" (click)="onCancelClicked()">Cancel</button>
                 </div>
             </form>
         </div>

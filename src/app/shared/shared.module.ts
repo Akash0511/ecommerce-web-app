@@ -4,18 +4,22 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
+import { SearchProductComponent } from './components/search-product/search-product.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const components = [HeaderComponent,FooterComponent]
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    SearchProductComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
-    TranslateModule
+    TranslateModule,
+    ReactiveFormsModule
   ],
   exports: [
     components

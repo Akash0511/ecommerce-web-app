@@ -1,17 +1,9 @@
 <div class="cart-page-container">
-    <div class="cart-page-header">
-        <h1>SHOPPINGCART</h1>
-    </div>
     <div class="cart-page-content" *ngIf="cartItems.length > 0">
-        <div class="cart-item-header cart-item-row">
-            <div class="cart-item-cell cart-item-product"><span>Product</span></div>
-            <div class="cart-item-cell cart-item-quantity"><span>Quantity</span></div>
-            <div class="cart-item-cell cart-item-total"><span>Total</span></div>
-            <div class="cart-item-cell cart-item-action"><span>Action</span></div>
-        </div>
-        <div class="cart-item-row" *ngFor="let cart of cartItems;let i = index">
+        <div class="card cart-item-row" *ngFor="let cart of cartItems;let i = index">
             <div class="cart-item-cell cart-item-product">
-                <div class="cart-item-thumbnail" [ngStyle]="{'background-image': ''}">
+                <div class="cart-item-thumbnail">
+                    <img width="130px" height="120px" src="{{cart.product.imgUrl}}" alt={{cart.product.name}}>
                 </div>
                 <div class="cart-item-info">
                     <div class="cart-item-brand">{{cart.product.brand}}</div>
@@ -33,39 +25,12 @@
                 </div>
             </div>
             <div class="cart-item-cell cart-item-action">
-                <div class="item-remove" (click)="removeFromCart(i)">X</div>
-            </div>
-        </div>
-        <div class="row cart-total">
-            <div class="col-lg-offset-6">
-                <div class="cart-total-row row">
-                    <div class="col-md-6 cart-total-label">
-                        Cart overview
-                    </div>
-                    <div class="col-md-6 cart-total-value"></div>
-                </div>
-                <div class="cart-total-row row">
-                    <div class="col-md-6 cart-total-label">
-                        Subtotal
-                    </div>
-                    <div class="col-md-6 cart-total-value">
-                        {{totalPrice | currency :'USD'}}
-                    </div>
-                </div>
-                <div class="cart-total-row row">
-                    <div class="col-md-6 cart-total-label">
-                        Total
-                    </div>
-                    <div class="col-md-6 cart-total-value cart-total-price">
-                        {{totalPrice | currency :'USD'}}
-                    </div>
-                </div>
+                <div class="item-remove" (click)="removeFromCart(i)"><mat-icon>delete</mat-icon></div>
             </div>
         </div>
         <div class="cart-buttons">
             <div class="continue-shopping"><a routerLink="/">Continue shopping</a></div>
-            <div class="checkout-button button button-primary button-large" (click)="goToCheckout()">Checkout ({{totalPrice | currency :'USD'}})
-            </div>
+            <button type="button" class="btn btn-success checkout-button" (click)="goToCheckout()">Checkout ({{totalPrice | currency :'USD'}})</button>
         </div>
     </div>
     <div class="cart-page-content" *ngIf="cartItems.length == 0">

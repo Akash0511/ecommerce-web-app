@@ -24,11 +24,9 @@ export class ProductDetailPageComponent implements OnInit {
   }
 
   addToCart() {
-    // service call to add to cart, resolver
     let cartData = {"product": this.product, "quantity": 1};
     this.cartService.addProductToCart(cartData);
     this.addCartClick = true;
-    //this.router.navigateByUrl('/order/cart');
   }
 
   viewCart(){
