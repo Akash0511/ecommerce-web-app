@@ -1,5 +1,8 @@
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { HttpLoaderFactory } from 'src/app/app.module';
 import { SearchProductComponent } from './search-product.component';
 
 describe('SearchProductComponent', () => {
@@ -8,9 +11,20 @@ describe('SearchProductComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SearchProductComponent ]
+      imports: [
+        HttpClientModule,
+        TranslateModule.forRoot({
+          loader: {
+            provide: TranslateLoader,
+            useFactory: HttpLoaderFactory,
+            deps: [HttpClient],
+          },
+        }),
+        ReactiveFormsModule
+      ],
+      declarations: [SearchProductComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

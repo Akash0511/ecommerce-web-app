@@ -29,12 +29,12 @@
             </div>
         </div>
         <div class="cart-buttons">
-            <div class="continue-shopping"><a routerLink="/">Continue shopping</a></div>
-            <button type="button" class="btn btn-success checkout-button" (click)="goToCheckout()">Checkout ({{totalPrice | currency :'USD'}})</button>
+            <div class="continue-shopping"><a routerLink="/">{{ 'CART.CONTINUE_SHOPPING' | translate }}</a></div>
+            <button type="button" class="btn btn-success checkout-button" (click)="goToCheckout()">{{ 'CART.CHECKOUT_BUTTON' | translate }} ({{totalPrice | currency :'USD'}})</button>
         </div>
     </div>
     <div class="cart-page-content" *ngIf="cartItems.length == 0">
-        <h4>Your cart is empty.</h4>
-        <a routerLink="/">Go Shopping</a>
+        <h4>{{ 'CART.CART_EMPTY' | translate }}</h4>
+        <a routerLink="/">{{ 'CART.GO_SHOPPING' | translate }}</a>
     </div>
 </div>

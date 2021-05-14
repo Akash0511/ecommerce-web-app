@@ -10,38 +10,38 @@ const USERNAME_KEY = 'AuthUserName';
 export class AuthService {
 
   validateUserIdentitySubject = new BehaviorSubject<boolean>(this.isAuthenticated());
-  
+
   constructor() { }
 
-  public logIn(username: string) : Observable<string>{
+  public logIn(username: string): Observable<string> {
     this.saveUserName(username);
     this.validateUserIdentitySubject.next(true);
-    return of("login success");
+    return of('login success');
   }
 
-  public logOut(){
+  public logOut(): void {
     localStorage.removeItem(USERNAME_KEY);
     localStorage.clear();
     this.validateUserIdentitySubject.next(false);
   }
 
-  public saveUserName(username: string){
+  public saveUserName(username: string): void {
     localStorage.removeItem(USERNAME_KEY);
     localStorage.setItem(USERNAME_KEY, username);
   }
 
-  public getUserName(): any{
+  public getUserName(): any {
     return localStorage.getItem(USERNAME_KEY);
   }
 
-  public isAuthenticated(): boolean{
-    if(this.getUserName() !== null){
+  public isAuthenticated(): boolean {
+    if (this.getUserName() !== null) {
       return true;
     }
     return false;
   }
 
-  public isLoggedIn(): Observable<boolean>{
+  public isLoggedIn(): Observable<boolean> {
     return this.validateUserIdentitySubject.asObservable();
   }
 }

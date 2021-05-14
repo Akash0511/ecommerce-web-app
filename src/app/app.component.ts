@@ -11,13 +11,13 @@ import { NavigationService } from './core/services/navigation.service';
 export class AppComponent {
   title = 'ecommerce-web-app';
 
-  constructor(private readonly navigationService: NavigationService, private readonly router: Router){}
+  constructor(private readonly navigationService: NavigationService, private readonly router: Router) { }
 
-  ngOnInit(){
+  ngOnInit() {
     this.router.events
-    .pipe(filter((evt: any)=> evt instanceof RoutesRecognized),pairwise())
-    .subscribe((events: RoutesRecognized[])=>{
-      this.navigationService.setPreviousUrl(events[0].urlAfterRedirects);
-    });
+      .pipe(filter((evt: any) => evt instanceof RoutesRecognized), pairwise())
+      .subscribe((events: RoutesRecognized[]) => {
+        this.navigationService.setPreviousUrl(events[0].urlAfterRedirects);
+      });
   }
 }

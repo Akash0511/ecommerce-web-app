@@ -7,7 +7,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { SearchProductComponent } from './components/search-product/search-product.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
-const components = [HeaderComponent,FooterComponent]
+const components = [HeaderComponent, FooterComponent, SearchProductComponent];
 
 @NgModule({
   declarations: [

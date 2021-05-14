@@ -9,7 +9,7 @@ import { User } from '../models/user';
 })
 export class UserService {
 
-  private USER_SERVICE_BASE_URL = "/assets/templates";
+  readonly USER_SERVICE_BASE_URL = '/assets/templates';
 
   constructor(private readonly http: HttpClient) { }
 

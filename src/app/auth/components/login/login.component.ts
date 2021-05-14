@@ -12,25 +12,27 @@ import { UserService } from 'src/app/core/services/user.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent implements OnInit, OnDestroy {
+export class LoginComponent implements OnInit {
 
-  previousUrl: string = "";
-  subscription!: Subscription;
+  previousUrl = '';
 
   loginForm!: FormGroup;
 
   emailControl!: FormControl;
   passwordControl!: FormControl;
 
-  constructor(private authService: AuthService, private router: Router,
-    private readonly userService: UserService, private readonly navigationService: NavigationService) { }
+  constructor(
+    private authService: AuthService,
+    private router: Router,
+    private readonly userService: UserService,
+    private readonly navigationService: NavigationService) { }
 
-  imgUrl: string = "../../../../assets/images/loginLogo.png";
+  imgUrl = '../../../../assets/images/loginLogo.png';
 
   ngOnInit(): void {
 
-    this.emailControl = new FormControl('', [Validators.required]);
-    this.passwordControl = new FormControl('', [Validators.required]);
+    this.emailControl = new FormControl('', [Validators.required, Validators.email]);
+    this.passwordControl = new FormControl('', [Validators.required, Validators.minLength(5)]);
 
     this.loginForm = new FormGroup({
       email: this.emailControl,
@@ -38,12 +40,12 @@ export class LoginComponent implements OnInit, OnDestroy {
     });
   }
 
-  onLogin() {
+  onLogin(): void {
     const user: LoginDetails = this.loginForm.value as LoginDetails;
     this.userService.getUserDetail(user.email, user.password).subscribe(response => {
       if (response !== undefined) {
         this.authService.logIn(user.email).subscribe(resp => {
-          this.subscription = this.navigationService.getPreviousUrl().subscribe(data => {
+          this.navigationService.getPreviousUrl().subscribe(data => {
             this.previousUrl = data;
           });
           if (this.previousUrl.includes('home')) {
@@ -56,11 +58,11 @@ export class LoginComponent implements OnInit, OnDestroy {
           console.log(error);
         });
       } else {
-        console.log("Invalid login credentials");
+        console.log('Invalid login credentials');
         this.loginForm.reset();
       }
     }, (error) => {
-      console.log("Something went wrong. Please try again!!!");
+      console.log('Something went wrong. Please try again!!!');
     });
   }
 
@@ -69,10 +71,6 @@ export class LoginComponent implements OnInit, OnDestroy {
       'is-invalid': control.touched && control.invalid,
       'is-valid': control.touched && control.valid
     };
-  }
-
-  ngOnDestroy(): void {
-    this.subscription.unsubscribe();
   }
 
 }

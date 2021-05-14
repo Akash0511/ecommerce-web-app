@@ -14,14 +14,14 @@ const routes: Routes = [
       {
         path: '',
         component: MainPageComponent,
-        resolve:{
+        resolve: {
           productList: ProductsResolver
         }
       },
       {
         path: 'product/:productId',
         component: ProductDetailPageComponent,
-        resolve:{
+        resolve: {
           product: ProductDetailResolver
         }
       }

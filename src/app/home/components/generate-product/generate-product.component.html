@@ -1,0 +1,12 @@
+<mat-card-header class="header" (click)="viewProductDetail(productInfo.id)">
+    <div mat-card-avatar class="example-header-image" style="background-image: url({{productInfo.imgUrl}});"></div>
+    <mat-card-title>{{productInfo.name}}</mat-card-title>
+    <mat-card-subtitle>{{productInfo.brand}}</mat-card-subtitle>
+</mat-card-header>
+<img class="image" height="400" mat-card-image src={{productInfo.imgUrl}} alt="Photo of a Product"
+    (click)="viewProductDetail(productInfo.id)">
+<mat-card-content>
+    <p>
+        {{productInfo.description}}
+    </p>
+</mat-card-content>

@@ -14,10 +14,14 @@ export class HeaderComponent implements OnInit {
 
   isLoggedIn!: any;
 
-  cart: number = 0;
+  cart = 0;
 
-  constructor(private readonly authService: AuthService, private readonly router: Router,
-    private readonly cartService: CartService, public readonly translate: TranslateService, private readonly productService: ProductService) {
+  constructor(
+    private readonly authService: AuthService,
+    private readonly router: Router,
+    private readonly cartService: CartService,
+    public readonly translate: TranslateService,
+    private readonly productService: ProductService) {
 
     translate.addLangs(['en', 'hn']);
     translate.setDefaultLang('en');

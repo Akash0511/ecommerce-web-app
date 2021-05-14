@@ -24,14 +24,14 @@ export class SearchProductComponent implements OnInit {
     });
   }
 
-  getControlValidationClasses(control: FormControl) {
+  getControlValidationClasses(control: FormControl): any {
     return {
       'is-invalid': control.touched && control.invalid,
       'is-valid': control.touched && control.valid
     };
   }
 
-  onSearchSubmit() {
+  onSearchSubmit(): void {
     this.searchText.emit(this.searchForm.value.searchName);
   }
 

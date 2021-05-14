@@ -10,11 +10,11 @@ export class NavigationService {
 
   constructor() { }
 
-  setPreviousUrl(previousUrl: string){
+  setPreviousUrl(previousUrl: string): void {
     this.previousUrl.next(previousUrl);
   }
 
-  getPreviousUrl(): Observable<string>{
+  getPreviousUrl(): Observable<string> {
     return this.previousUrl.asObservable();
   }
 }

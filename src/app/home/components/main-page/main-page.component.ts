@@ -12,11 +12,12 @@ export class MainPageComponent implements OnInit {
 
   products: Product[] = [];
 
-  constructor(private readonly route: ActivatedRoute, private readonly router: Router,
+  constructor(
+    private readonly route: ActivatedRoute,
     private readonly productService: ProductService) { }
 
-  ngOnInit() {
-    this.productService.getAllProducts().subscribe(data =>{
+  ngOnInit(): void {
+    this.productService.getAllProducts().subscribe(data => {
       this.products = data;
     });
 
@@ -25,7 +26,5 @@ export class MainPageComponent implements OnInit {
     });
   }
 
-  viewProductDetail(productId: string) {
-    this.router.navigateByUrl('/home/product/' + productId);
-  }
+
 }

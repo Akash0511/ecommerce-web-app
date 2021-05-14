@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">{{ 'HEADER.TITLE' | translate }}</a>
+    <a class="navbar-brand" [routerLink]="['/']">{{ 'HEADER.TITLE' | translate }}</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -8,19 +8,19 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" [routerLink]="['/']">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" [routerLink]="['/']">{{ 'HEADER.HOME' | translate }} <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" [routerLink]= "['/order/cart']">Cart({{cart}})</a>
+                <a class="nav-link" [routerLink]= "['/order/cart']">{{ 'HEADER.CART' | translate }}({{cart}})</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
-                    Language
+                    {{ 'HEADER.LANGUAGE' | translate }}
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" (click)="changeLang('en')">English</a>
-                    <a class="dropdown-item" (click)="changeLang('hn')">Hindi</a>
+                    <a class="dropdown-item" (click)="changeLang('en')">{{ 'HEADER.SELECT_ENGLISH' | translate }}</a>
+                    <a class="dropdown-item" (click)="changeLang('hn')">{{ 'HEADER.SELECT_HINDI' | translate }}</a>
                 </div>
             </li>
 
@@ -28,8 +28,8 @@
         <app-search-product (searchText) = "searchTextHandler($event)"></app-search-product>
         &nbsp;&nbsp;
         <div class="login">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" *ngIf="!(isLoggedIn)" (click)="login()">Login</button>
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" *ngIf="isLoggedIn" (click)="logout()">Logout</button>
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" *ngIf="!(isLoggedIn)" (click)="login()">{{ 'HEADER.LOGIN' | translate }}</button>
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" *ngIf="isLoggedIn" (click)="logout()">{{ 'HEADER.LOGOUT' | translate }}</button>
         </div>
     </div>
 </nav>

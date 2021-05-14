@@ -6,12 +6,12 @@ import { PlaceOrderComponent } from './components/place-order/place-order.compon
 
 const routes: Routes = [
   {
-    path:'cart',
+    path: 'cart',
     component: CartComponent,
     canActivate: [AuthGuard]
   },
   {
-    path:'checkout',
+    path: 'checkout',
     component: PlaceOrderComponent,
     canActivate: [AuthGuard]
   },

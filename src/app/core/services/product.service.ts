@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ProductService {
 
-  private PRODUCT_SERVICE_BASE_URL = "/assets/templates";
+  private PRODUCT_SERVICE_BASE_URL = '/assets/templates';
 
   productSubject = new BehaviorSubject<Product[]>([]);
 
@@ -34,7 +34,7 @@ export class ProductService {
       });
   }
 
-  public getAllProducts(): Observable<Product[]>{
+  public getAllProducts(): Observable<Product[]> {
     return this.productSubject.asObservable();
   }
 }

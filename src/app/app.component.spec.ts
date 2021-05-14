@@ -1,15 +1,36 @@
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { AppComponent } from './app.component';
+import { HttpLoaderFactory } from './app.module';
+import { NavigationService } from './core/services/navigation.service';
+import { FooterComponent } from './shared/components/footer/footer.component';
+import { HeaderComponent } from './shared/components/header/header.component';
+import { SearchProductComponent } from './shared/components/search-product/search-product.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      providers: [
+        NavigationService
+      ],
       imports: [
-        RouterTestingModule
+        RouterTestingModule,
+        HttpClientModule,
+        TranslateModule.forRoot({
+          loader: {
+            provide: TranslateLoader,
+            useFactory: HttpLoaderFactory,
+            deps: [HttpClient],
+          },
+        })
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        HeaderComponent,
+        FooterComponent,
+        SearchProductComponent
       ],
     }).compileComponents();
   });
@@ -24,12 +45,5 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app.title).toEqual('ecommerce-web-app');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('ecommerce-web-app app is running!');
   });
 });

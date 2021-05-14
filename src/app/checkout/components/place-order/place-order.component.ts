@@ -3,7 +3,6 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { CartService } from 'src/app/core/services/cart.service';
-import { Product } from 'src/app/core/models/product';
 import { Cart } from 'src/app/core/models/cart';
 
 @Component({
@@ -12,7 +11,7 @@ import { Cart } from 'src/app/core/models/cart';
   styleUrls: ['./place-order.component.scss']
 })
 export class PlaceOrderComponent implements OnInit {
-  successMessage: string = "Order placed successfully!!!";
+  successMessage: string = 'Order placed successfully!!!';
   products: Cart[] = [];
   totalPrice: number = 0;
   deliveryDetailsForm!: FormGroup;
@@ -25,15 +24,22 @@ export class PlaceOrderComponent implements OnInit {
   addressControl!: FormControl;
   cityControl!: FormControl;
   stateControl!: FormControl;
-  zipCodeControl!: FormControl;
+  pinCodeControl!: FormControl;
 
-  constructor(private readonly route: ActivatedRoute, private readonly router: Router,
-    private _snackBar: MatSnackBar, private readonly cartService: CartService) { }
+  constructor(
+    private readonly route: ActivatedRoute,
+    private readonly router: Router,
+    private readonly snackBar: MatSnackBar,
+    private readonly cartService: CartService) { }
 
   ngOnInit(): void {
     this.cartService.getCartData().subscribe(data => {
       this.products = data;
     });
+    if (this.products.length === 0) {
+      this.router.navigateByUrl('/order/cart');
+      return;
+    }
 
     this.totalPrice = this.cartService.getTotalCartProductPrice();
 
@@ -49,7 +55,7 @@ export class PlaceOrderComponent implements OnInit {
     this.addressControl = new FormControl('', [Validators.required, Validators.minLength(4)]);
     this.cityControl = new FormControl('', [Validators.required, Validators.pattern('[a-zA-Z ]+')]);
     this.stateControl = new FormControl('', [Validators.required]);
-    this.zipCodeControl = new FormControl('', [Validators.required, Validators.pattern('[0-9]+')]);
+    this.pinCodeControl = new FormControl('', [Validators.required, Validators.pattern('[0-9]+')]);
 
     this.deliveryDetailsForm = new FormGroup({
       firstName: this.firstNameControl,
@@ -60,17 +66,17 @@ export class PlaceOrderComponent implements OnInit {
       address: this.addressControl,
       city: this.cityControl,
       state: this.stateControl,
-      zipCode: this.zipCodeControl
+      pinCode: this.pinCodeControl
     });
   }
-  onFormSubmit() {
+  onFormSubmit(): void {
     this.cartService.clearCart();
     this.openSnackBar();
     this.router.navigateByUrl('/');
   }
 
-  openSnackBar() {
-    this._snackBar.open(this.successMessage, "", { duration: 5000, verticalPosition: 'bottom', horizontalPosition: 'end', panelClass: ["green-snackbar"] });
+  openSnackBar(): void {
+    this.snackBar.open(this.successMessage, '', { duration: 5000, verticalPosition: 'bottom', horizontalPosition: 'end', panelClass: ['green-snackbar'] });
   }
 
   getControlValidationClasses(control: FormControl) {
@@ -80,7 +86,7 @@ export class PlaceOrderComponent implements OnInit {
     };
   }
 
-  onCancelClicked() {
+  onCancelClicked(): void {
     this.deliveryDetailsForm.reset();
     this.router.navigateByUrl('/order/cart');
   }

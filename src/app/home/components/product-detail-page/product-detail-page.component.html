@@ -1,18 +1,35 @@
 <div class="card mb-3">
-    <div class="row no-gutters">
-      <div class="col-md-4">
-        <img width="250" height="300px" src={{product.imgUrl}} alt="Photo of a Product">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img width="350" height="500px" src={{product.imgUrl}} alt="Photo of a Product">
+    </div>
+    <div class="col-md-8 details">
+      <div class="card-body">
+        <h4 class="card-title">{{product.name}}</h4>
+        <h5 class="card-title">{{product.price}}</h5>
+        <p class="card-text">{{product.description}}</p>
+        <ul class="list-unstyled">
+          <li>Features:
+            <ul *ngFor="let feature of product.features" class="ul-data">
+              <li>{{feature}}</li>
+            </ul>
+          </li>
+        </ul>
       </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h4 class="card-title">{{product.name}}</h4>
-          <h5 class="card-title">{{product.price}}</h5>
-          <p class="card-text">{{product.description}}</p>
-        </div>
-        <mat-card-actions class="addCartButton">
-            <button class="btn btn-info" mat-button (click)="addToCart()" *ngIf = "!(addCartClick)"><mat-icon>add_shopping_cart</mat-icon>Add to cart</button>
-            <button class="btn btn-success" mat-button (click)="viewCart()" *ngIf = "addCartClick"><mat-icon>add_shopping_cart</mat-icon>View cart</button>
-        </mat-card-actions>
-      </div>
+      <mat-card-actions class="addCartButton">
+        <button class="btn btn-info cartButton" mat-button (click)="addToCart()" *ngIf="!(addCartClick)">
+          <mat-icon>add_shopping_cart</mat-icon>{{ 'PRODUCT_DETAILS.ADD_TO_CART_BUTTON' | translate }}
+        </button>
+        <button class="btn btn-success cartButton" mat-button (click)="viewCart()" *ngIf="addCartClick">
+          <mat-icon>add_shopping_cart</mat-icon>{{ 'PRODUCT_DETAILS.VIEW_CART_BUTTON' | translate }}
+        </button>
+        <button class="btn btn-warning" mat-button [routerLink]="['/']" *ngIf="!(addCartClick)">
+          <mat-icon>close</mat-icon>{{ 'PRODUCT_DETAILS.CANCEL_BUTTON' | translate }}
+        </button>
+        <button class="btn btn-info" mat-button [routerLink]="['/']" *ngIf="addCartClick">
+          <mat-icon>home</mat-icon>{{ 'PRODUCT_DETAILS.SHOP_MORE_BUTTON' | translate }}
+        </button>
+      </mat-card-actions>
     </div>
   </div>
+</div>
