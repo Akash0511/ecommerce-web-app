@@ -1,0 +1,43 @@
+[
+    {
+        "name": "Electonics",
+        "children": [
+            {
+                "name": "Mobile"
+            },
+            {
+                "name": "Headphone"
+            },
+            {
+                "name": "Mobile Accessories"
+            }
+        ]
+    },
+    {
+        "name": "Fashion",
+        "children": [
+            {
+                "name": "Men",
+                "children": [
+                    {
+                        "name": "T-Shirt"
+                    },
+                    {
+                        "name": "Footwear"
+                    }
+                ]
+            },
+            {
+                "name": "Women",
+                "children": [
+                    {
+                        "name": "Dresses"
+                    },
+                    {
+                        "name": "Footwear"
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -89,7 +89,7 @@ describe('CartComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should get the products present in cart', () => {
+  it('should get all the products present in cart', () => {
     component.cartItems = dummyData;
     mockCartService = fixture.debugElement.injector.get(CartService);
     spyOn(mockCartService, 'getCartData').and.callFake(() => {
@@ -100,7 +100,7 @@ describe('CartComponent', () => {
     expect(mockCartService.getCartData).toHaveBeenCalled();
   });
 
-  it('should remove the product from cart', () => {
+  it('should remove the desired product from cart', () => {
     component.cartItems = dummyData;
     mockCartService = fixture.debugElement.injector.get(CartService);
     spyOn(mockCartService, 'removeProductFromCart').and.callFake(() => {
@@ -109,15 +109,6 @@ describe('CartComponent', () => {
     component.removeFromCart(0);
     expect(mockCartService.removeProductFromCart).toHaveBeenCalled();
     expect(mockCartService.removeProductFromCart).toHaveBeenCalledOnceWith(0);
-  });
-
-  it('should get the total price of products present in the cart', () => {
-    component.cartItems = dummyData;
-    mockCartService = fixture.debugElement.injector.get(CartService);
-    spyOn(mockCartService, 'getTotalCartProductPrice').and.returnValue(100);
-    component.getTotalPrice();
-    expect(component.totalPrice).toBe(100);
-    expect(mockCartService.getTotalCartProductPrice).toHaveBeenCalled();
   });
 
   it('should increase the quantity of products present in the cart', () => {
@@ -149,7 +140,7 @@ describe('CartComponent', () => {
     expect(mockCartService.decreaseProductQuantity).toHaveBeenCalledWith(0);
   });
 
-  it('should generate empty content in the cart', () => {
+  it('should create empty cart', () => {
     mockCartService = fixture.debugElement.injector.get(CartService);
     spyOn(mockCartService, 'getCartData').and.callFake(() => {
       return of([]);
@@ -162,7 +153,7 @@ describe('CartComponent', () => {
     expect(fixture.debugElement.queryAll(By.css('div')).length).toBe(2);
   });
 
-  it('should create cart row for each product in the cart', () => {
+  it('should render each product in a row in the cart', () => {
     mockCartService = fixture.debugElement.injector.get(CartService);
     spyOn(mockCartService, 'getCartData').and.callFake(() => {
       return of(dummyData);
@@ -175,17 +166,26 @@ describe('CartComponent', () => {
     expect(fixture.debugElement.queryAll(By.css('div')).length).toBe(34);
   });
 
-  it('should navigate to checkout page', inject([Router], (router: Router) => {
-    spyOn(router, 'navigateByUrl').and.stub();
-    component.goToCheckout();
-    expect(router.navigateByUrl).toHaveBeenCalledWith('/order/checkout');
-  }));
-
-  it('should not do anything decrement is called with product quantity 1', () => {
+  it('should disable minus button when product quantity is 1', () => {
     component.cartItems = dummyData;
     mockCartService = fixture.debugElement.injector.get(CartService);
     component.minusOne(0);
     expect(component.cartItems[0].quantity).toBe(1);
   });
+
+  it('should get the total price of products present in the cart', () => {
+    component.cartItems = dummyData;
+    mockCartService = fixture.debugElement.injector.get(CartService);
+    spyOn(mockCartService, 'getTotalCartProductPrice').and.returnValue(100);
+    component.getTotalPrice();
+    expect(component.totalPrice).toBe(100);
+    expect(mockCartService.getTotalCartProductPrice).toHaveBeenCalled();
+  });
+
+  it('should navigate to checkout page when clicked on checkout', inject([Router], (router: Router) => {
+    spyOn(router, 'navigateByUrl').and.stub();
+    component.goToCheckout();
+    expect(router.navigateByUrl).toHaveBeenCalledWith('/order/checkout');
+  }));
 
 });

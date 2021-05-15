@@ -6,6 +6,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { Product } from 'src/app/core/models/product';
 import { RatingComponent } from '../rating/rating.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 import { GenerateProductComponent } from './generate-product.component';
 
@@ -26,7 +27,8 @@ describe('GenerateProductComponent', () => {
         HttpClientModule,
         MatCardModule,
         MatIconModule,
-        NgbModule
+        NgbModule,
+        NgxPaginationModule
       ]
     })
       .compileComponents();

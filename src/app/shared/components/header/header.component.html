@@ -8,10 +8,11 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" [routerLink]="['/']">{{ 'HEADER.HOME' | translate }} <span class="sr-only">(current)</span></a>
+                <a class="nav-link" [routerLink]="['/']">{{ 'HEADER.HOME' | translate }} <span
+                        class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" [routerLink]= "['/order/cart']">{{ 'HEADER.CART' | translate }}({{cart}})</a>
+                <a class="nav-link" [routerLink]="['/order/cart']">{{ 'HEADER.CART' | translate }}({{cart}})</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -23,14 +24,16 @@
                     <a class="dropdown-item" (click)="changeLang('hn')">{{ 'HEADER.SELECT_HINDI' | translate }}</a>
                 </div>
             </li>
-            <app-category></app-category>
+            <app-category (productCategory)="renderProductByCategory($event)"></app-category>
 
         </ul>
-        <app-search-product (searchText) = "searchTextHandler($event)"></app-search-product>
+        <app-search-product (searchText)="searchTextHandler($event)"></app-search-product>
         &nbsp;&nbsp;
         <div class="login">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" *ngIf="!(isLoggedIn)" (click)="login()">{{ 'HEADER.LOGIN' | translate }}</button>
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" *ngIf="isLoggedIn" (click)="logout()">{{ 'HEADER.LOGOUT' | translate }}</button>
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" *ngIf="!(isLoggedIn)"
+                (click)="login()">{{ 'HEADER.LOGIN' | translate }}</button>
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" *ngIf="isLoggedIn" (click)="logout()">{{
+                'HEADER.LOGOUT' | translate }}</button>
         </div>
     </div>
 </nav>

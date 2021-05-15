@@ -88,7 +88,7 @@ describe('ProductDetailPageComponent', () => {
     expect(mockCartService.addProductToCart).toHaveBeenCalled();
   });
 
-  it('should navigate to cart page when clicked on view cart', inject([Router], (router: Router) => {
+  it('should navigate to cart page when view cart is clicked', inject([Router], (router: Router) => {
     spyOn(router, 'navigateByUrl').and.stub();
     component.viewCart();
     expect(router.navigateByUrl).toHaveBeenCalledWith('/order/cart');

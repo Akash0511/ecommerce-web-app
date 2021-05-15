@@ -42,7 +42,7 @@ describe('UserService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('should return an Observable<User[]>', () => {
+  it('should return an array of User object of type Observable<User[]>', () => {
     service.getAllUsers().subscribe(users => {
       expect(users.length).toBe(2);
       expect(users).toEqual(dummyUsers);
@@ -53,7 +53,7 @@ describe('UserService', () => {
     req.flush(dummyUsers);
   });
 
-  it('should return a User', () => {
+  it('should return a correct User object', () => {
     service.getUserDetail('abc@gmail.com', 'abcdef').subscribe(users => {
       expect(users.userId).toEqual('1');
       expect(users).toEqual(dummyUsers[0]);

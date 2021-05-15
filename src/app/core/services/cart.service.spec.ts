@@ -37,13 +37,13 @@ describe('CartService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('should decrease the quantity of element of cart', () => {
+  it('should decrease the quantity of product in the cart', () => {
     service.addProductToCart(dummyProduct1);
     service.decreaseProductQuantity(0);
     service.getCartData().subscribe(res => expect(res[0].quantity).toEqual(0));
   });
 
-  it('should clear cart', () => {
+  it('should clear all products in the cart', () => {
     service.addProductToCart(dummyProduct1);
     service.clearCart();
     service.getCartData().subscribe(res => expect(res).toEqual([]));
@@ -54,12 +54,12 @@ describe('CartService', () => {
     service.getCartData().subscribe(res => expect(res).toEqual([dummyProduct1]));
   });
 
-  it('should get elements of cart', () => {
+  it('should get products from the cart', () => {
     service.addProductToCart(dummyProduct1);
     service.getCartData().subscribe(res => expect(res).toEqual([dummyProduct1]));
   });
 
-  it('should get total price of elements of cart', () => {
+  it('should get total price of products from the cart', () => {
     service.addProductToCart(dummyProduct1);
     expect(service.getTotalCartProductPrice()).toBe(15000);
   });
@@ -70,13 +70,13 @@ describe('CartService', () => {
     service.getCartData().subscribe(res => expect(res).toEqual([]));
   });
 
-  it('should increase the quantity of element of cart', () => {
+  it('should increase the quantity of product in the cart', () => {
     service.addProductToCart(dummyProduct1);
     service.increaseProductQuantity(0);
     service.getCartData().subscribe(res => expect(res[0].quantity).toEqual(2));
   });
 
-  it('should increase the quantity of product when added twice', () => {
+  it('should increase the quantity of product when product is added more than once in the cart', () => {
     service.addProductToCart(dummyProduct1);
     service.addProductToCart(dummyProduct1);
     service.getCartData().subscribe(res => expect(res[0].quantity).toEqual(2));
