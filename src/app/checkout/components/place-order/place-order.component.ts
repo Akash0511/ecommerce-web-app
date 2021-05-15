@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { CartService } from 'src/app/core/services/cart.service';
 import { Cart } from 'src/app/core/models/cart';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-place-order',
@@ -11,7 +12,8 @@ import { Cart } from 'src/app/core/models/cart';
   styleUrls: ['./place-order.component.scss']
 })
 export class PlaceOrderComponent implements OnInit {
-  successMessage = 'Order placed successfully!!!';
+
+  successMessage!: string; 
   products: Cart[] = [];
   totalPrice = 0;
   deliveryDetailsForm!: FormGroup;
@@ -30,7 +32,10 @@ export class PlaceOrderComponent implements OnInit {
     private readonly route: ActivatedRoute,
     private readonly router: Router,
     private readonly snackBar: MatSnackBar,
-    private readonly cartService: CartService) { }
+    private readonly cartService: CartService,
+    private readonly translateService: TranslateService) {
+      this.successMessage = this.translateService.instant('CHECKOUT.SUCCESS_MSG');
+     }
 
   ngOnInit(): void {
     this.cartService.getCartData().subscribe(data => {

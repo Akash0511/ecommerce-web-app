@@ -69,6 +69,7 @@
       "PINCODE_REQUIRED": "Please Enter your pin code",
       "PINCODE_PATTERN": "only digits allowed",
       "PLACEORDER": "Place Order",
-      "CANCEL": "Cancel"
+      "CANCEL": "Cancel",
+      "SUCCESS_MSG": "Your Order has been placed successfully!!!"
     }
   }
