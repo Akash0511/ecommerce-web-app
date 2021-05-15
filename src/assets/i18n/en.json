@@ -7,6 +7,7 @@
       "SELECT_ENGLISH": "English",
       "SELECT_HINDI": "Hindi",
       "SEARCH": "Search",
+      "SEARCH_PLACEHOLDER": "Search by name",
       "LOGIN": "Login",
       "LOGOUT": "Logout"
     },
@@ -24,7 +25,6 @@
       "EMAIL_REQUIRED": "Please enter email",
       "VALID_EMAIL": "Please enter valid email",
       "PASSWORD_REQUIRED": "Please enter password",
-      "MIN_PASSWORD_LENGTH": "Password should be atleast of length 5",
       "LOGIN_BUTTON": "Log-in"
     },
     "CART": {

@@ -31,6 +31,10 @@ export class SearchProductComponent implements OnInit {
     };
   }
 
+  searchProductByName(searchString: string): void {
+    this.searchText.emit(searchString);
+  }
+
   onSearchSubmit(): void {
     this.searchText.emit(this.searchForm.value.searchName);
   }

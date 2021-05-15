@@ -9,7 +9,7 @@ import { HttpLoaderFactory } from 'src/app/app.module';
 import { Product } from 'src/app/core/models/product';
 import { ProductService } from 'src/app/core/services/product.service';
 import { GenerateProductComponent } from '../generate-product/generate-product.component';
-
+import { NgxPaginationModule } from 'ngx-pagination';
 import { MainPageComponent } from './main-page.component';
 
 describe('MainPageComponent', () => {
@@ -42,6 +42,7 @@ describe('MainPageComponent', () => {
         HttpClientModule,
         MatCardModule,
         MatIconModule,
+        NgxPaginationModule,
         TranslateModule.forRoot({
           loader: {
             provide: TranslateLoader,

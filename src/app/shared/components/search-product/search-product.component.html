@@ -1,5 +1,5 @@
 <form class="form-inline my-2 my-lg-0" nonvalidate [formGroup]="searchForm">
-    <input class="form-control mr-sm-2" type="search" placeholder="Search by name" aria-label="Search"
+    <input #searchProduct (input)="searchProductByName(searchProduct.value)" class="form-control mr-sm-2" type="search" placeholder="{{ 'HEADER.SEARCH_PLACEHOLDER' | translate }}" aria-label="Search"
         formControlName="searchName" [ngClass]="getControlValidationClasses(searchNameControl)">
     <div class="invalid-feedback" *ngIf="searchNameControl.touched && searchNameControl.errors?.minlength">
         must be of atleast length 1

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { Product } from 'src/app/core/models/product';
 import { ProductService } from 'src/app/core/services/product.service';
 
@@ -11,6 +11,8 @@ import { ProductService } from 'src/app/core/services/product.service';
 export class MainPageComponent implements OnInit {
 
   products: Product[] = [];
+  page = 1;
+  total!: number;
 
   constructor(
     private readonly route: ActivatedRoute,

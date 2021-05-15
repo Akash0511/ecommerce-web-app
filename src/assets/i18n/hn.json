@@ -6,7 +6,8 @@
     "LANGUAGE": "भाषा",
     "SELECT_ENGLISH": "अंग्रेज़ी",
     "SELECT_HINDI": "हिंदी",
-    "SEARCH": "खोज",
+    "SEARCH": "खोजें",
+    "SEARCH_PLACEHOLDER": "नाम द्वारा खोजें",
     "LOGIN": "लॉग-इन",
     "LOGOUT": "लॉग-आउट"
   },
@@ -24,7 +25,6 @@
     "EMAIL_REQUIRED": "कृपया ईमेल दर्ज करें",
     "VALID_EMAIL": "कृपया वैध ईमेल दर्ज़ करें",
     "PASSWORD_REQUIRED": "कृप्या पास्वर्ड भरो",
-    "MIN_PASSWORD_LENGTH": "पासवर्ड लंबाई कम से कम 5 होनी चाहिए",
     "LOGIN_BUTTON": "लॉग-इन"
   },
   "CART": {

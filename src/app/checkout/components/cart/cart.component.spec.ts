@@ -1,9 +1,10 @@
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, inject, TestBed } from '@angular/core/testing';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { By } from '@angular/platform-browser';
+import { Router } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { of } from 'rxjs';
@@ -174,11 +175,11 @@ describe('CartComponent', () => {
     expect(fixture.debugElement.queryAll(By.css('div')).length).toBe(34);
   });
 
-  it('should navigate to checkout page', () => {
-    const navigateSpy = spyOn(component['router'], 'navigateByUrl');
+  it('should navigate to checkout page', inject([Router], (router: Router) => {
+    spyOn(router, 'navigateByUrl').and.stub();
     component.goToCheckout();
-    expect(navigateSpy).toHaveBeenCalledWith('/order/checkout');
-  });
+    expect(router.navigateByUrl).toHaveBeenCalledWith('/order/checkout');
+  }));
 
   it('should not do anything decrement is called with product quantity 1', () => {
     component.cartItems = dummyData;

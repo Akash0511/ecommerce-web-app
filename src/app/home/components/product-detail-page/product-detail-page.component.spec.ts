@@ -1,9 +1,9 @@
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, inject, TestBed } from '@angular/core/testing';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { By } from '@angular/platform-browser';
-import { ActivatedRoute, Data } from '@angular/router';
+import { ActivatedRoute, Data, Router } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { of } from 'rxjs';
@@ -88,13 +88,14 @@ describe('ProductDetailPageComponent', () => {
     expect(mockCartService.addProductToCart).toHaveBeenCalled();
   });
 
-  it('should navigate to cart page when clicked on view cart', () => {
-    const navigateSpy = spyOn(component['router'], 'navigateByUrl');
+  it('should navigate to cart page when clicked on view cart', inject([Router], (router: Router) => {
+    spyOn(router, 'navigateByUrl').and.stub();
     component.viewCart();
-    expect(navigateSpy).toHaveBeenCalledWith('/order/cart');
-  });
+    expect(router.navigateByUrl).toHaveBeenCalledWith('/order/cart');
+  }));
 
   it('should render each div for product details', () => {
     expect(fixture.debugElement.queryAll(By.css('div')).length).toBe(6);
   });
 });
+

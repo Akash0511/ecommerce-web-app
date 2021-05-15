@@ -12,6 +12,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { GenerateProductComponent } from './components/generate-product/generate-product.component';
 import { RatingComponent } from './components/rating/rating.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     MatIconModule,
     ReactiveFormsModule,
     TranslateModule,
-    NgbModule
+    NgbModule,
+    NgxPaginationModule
   ]
 })
 export class HomeModule { }

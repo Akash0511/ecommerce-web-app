@@ -13,7 +13,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class PlaceOrderComponent implements OnInit {
 
-  successMessage!: string; 
+  successMessage!: string;
   products: Cart[] = [];
   totalPrice = 0;
   deliveryDetailsForm!: FormGroup;
@@ -34,8 +34,8 @@ export class PlaceOrderComponent implements OnInit {
     private readonly snackBar: MatSnackBar,
     private readonly cartService: CartService,
     private readonly translateService: TranslateService) {
-      this.successMessage = this.translateService.instant('CHECKOUT.SUCCESS_MSG');
-     }
+    this.successMessage = this.translateService.instant('CHECKOUT.SUCCESS_MSG');
+  }
 
   ngOnInit(): void {
     this.cartService.getCartData().subscribe(data => {
