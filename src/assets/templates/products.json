@@ -6,10 +6,11 @@
         "color": "Navy Blue",
         "price": 15000,
         "category": "Mobile",
-        "description": "The Samsung Galaxy M series has gained a lot of popularity thanks to affordable prices and up-to-date hardware. Samsung has managed to lower prices by selling these models online, reducing distribution costs. The sub-Rs. 15,000 Samsung Galaxy M30 set the pace, and a refreshed version, the Galaxy M30s, really helped the company strengthen its position in this segment.",
+        "description": "The Samsung Galaxy M series has gained a lot of popularity thanks to affordable prices and up-to-date hardware. Samsung has managed to lower prices by selling these models online, reducing distribution costs.",
         "features": "",
         "imgUrl": "assets/images/m31-samsung.jpg",
-        "quantity": 4
+        "quantity": 4,
+        "rating": 4.6
     },
     {
         "id": "2",
@@ -18,10 +19,11 @@
         "color": "Black",
         "price": 20000,
         "category": "Mobile",
-        "description": "Moto G6 Plus smartphone was launched in April 2018. The phone comes with a 5.93-inch touchscreen display with a resolution of 1080x2160 pixels at a pixel density of 409 pixels per inch (ppi) and an aspect ratio of 18:9. Moto G6 Plus is powered by a 2.2GHz octa-core Qualcomm Snapdragon 630 processor.",
+        "description": "Moto G6 Plus smartphone was launched in April 2018. The phone comes with a 5.93-inch touchscreen display with a resolution of 1080x2160 pixels at a pixel density of 409 pixels per inch (ppi) and an aspect ratio of 18:9.",
         "features": "",
         "imgUrl": "assets/images/moto-g61.jpg",
-        "quantity": 5
+        "quantity": 5,
+        "rating": 4.3
     },
     {
         "id": "3",
@@ -30,10 +32,11 @@
         "color": "Black",
         "price": 20000,
         "category": "Mobile",
-        "description": "Moto G6 Plus smartphone was launched in April 2018. The phone comes with a 5.93-inch touchscreen display with a resolution of 1080x2160 pixels at a pixel density of 409 pixels per inch (ppi) and an aspect ratio of 18:9. Moto G6 Plus is powered by a 2.2GHz octa-core Qualcomm Snapdragon 630 processor.",
+        "description": "Moto G6 Plus smartphone was launched in April 2018. The phone comes with a 5.93-inch touchscreen display with a resolution of 1080x2160 pixels at a pixel density of 409 pixels per inch (ppi) and an aspect ratio of 18:9.",
         "features": "",
         "imgUrl": "assets/images/moto-g61.jpg",
-        "quantity": 5
+        "quantity": 5,
+        "rating": 3.6
     },
     {
         "id": "4",
@@ -42,10 +45,11 @@
         "color": "Navy Blue",
         "price": 15000,
         "category": "Mobile",
-        "description": "The Samsung Galaxy M series has gained a lot of popularity thanks to affordable prices and up-to-date hardware. Samsung has managed to lower prices by selling these models online, reducing distribution costs. The sub-Rs. 15,000 Samsung Galaxy M30 set the pace, and a refreshed version, the Galaxy M30s, really helped the company strengthen its position in this segment.",
+        "description": "The Samsung Galaxy M series has gained a lot of popularity thanks to affordable prices and up-to-date hardware. Samsung has managed to lower prices by selling these models online, reducing distribution costs.",
         "features": "",
         "imgUrl": "assets/images/m31-samsung.jpg",
-        "quantity": 4
+        "quantity": 4,
+        "rating": 2.9
     },
     {
         "id": "5",
@@ -54,14 +58,15 @@
         "color": "Navy Blue",
         "price": 15000,
         "category": "Mobile",
-        "description": "The Samsung Galaxy M series has gained a lot of popularity thanks to affordable prices and up-to-date hardware. Samsung has managed to lower prices by selling these models online, reducing distribution costs. The sub-Rs. 15,000 Samsung Galaxy M30 set the pace, and a refreshed version, the Galaxy M30s, really helped the company strengthen its position in this segment.",
+        "description": "The Samsung Galaxy M series has gained a lot of popularity thanks to affordable prices and up-to-date hardware. Samsung has managed to lower prices by selling these models online, reducing distribution costs.",
         "features": [
             "Quad Camera Setup - 64MP (F1.8) Main Camera +8MP (F2.2) Ultra Wide Camera +5MP(F2.2) Depth Camera +5MP(F2.4) Macro Camera and 32MP (F2.0) front facing Camera",
             "6.4-inch(16.21 centimeters) Super Amoled - Infinity U Cut Display , FHD+ Resolution (2340 x 1080) , 404 ppi pixel density and 16M color support",
             "Android v10.0 operating system with 2.3GHz + 1.7GHz Exynos 9611 Octa core processor , 6GB RAM, 128GB internal memory expandable up to 512GB and dual SIM"
         ],
         "imgUrl": "assets/images/m31-samsung.jpg",
-        "quantity": 4
+        "quantity": 4,
+        "rating": 4.3
     },
     {
         "id": "6",
@@ -70,9 +75,10 @@
         "color": "Navy Blue",
         "price": 15000,
         "category": "Mobile",
-        "description": "The Samsung Galaxy M series has gained a lot of popularity thanks to affordable prices and up-to-date hardware. Samsung has managed to lower prices by selling these models online, reducing distribution costs. The sub-Rs. 15,000 Samsung Galaxy M30 set the pace, and a refreshed version, the Galaxy M30s, really helped the company strengthen its position in this segment.",
+        "description": "The Samsung Galaxy M series has gained a lot of popularity thanks to affordable prices and up-to-date hardware. Samsung has managed to lower prices by selling these models online, reducing distribution costs.",
         "features": "",
         "imgUrl": "assets/images/m31-samsung.jpg",
-        "quantity": 4
+        "quantity": 4,
+        "rating": 4.6
     }
 ]

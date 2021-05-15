@@ -4,6 +4,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterTestingModule } from '@angular/router/testing';
 import { Product } from 'src/app/core/models/product';
+import { RatingComponent } from '../rating/rating.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { GenerateProductComponent } from './generate-product.component';
 
@@ -15,12 +17,16 @@ describe('GenerateProductComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [GenerateProductComponent],
+      declarations: [
+        GenerateProductComponent,
+        RatingComponent
+      ],
       imports: [
         RouterTestingModule,
         HttpClientModule,
         MatCardModule,
         MatIconModule,
+        NgbModule
       ]
     })
       .compileComponents();
@@ -37,7 +43,8 @@ describe('GenerateProductComponent', () => {
       description: '',
       features: '',
       imgUrl: '',
-      quantity: 4
+      quantity: 4,
+      rating: 4.5
     };
 
     fixture = TestBed.createComponent(GenerateProductComponent);

@@ -11,9 +11,9 @@ import { Cart } from 'src/app/core/models/cart';
   styleUrls: ['./place-order.component.scss']
 })
 export class PlaceOrderComponent implements OnInit {
-  successMessage: string = 'Order placed successfully!!!';
+  successMessage = 'Order placed successfully!!!';
   products: Cart[] = [];
-  totalPrice: number = 0;
+  totalPrice = 0;
   deliveryDetailsForm!: FormGroup;
 
   firstNameControl!: FormControl;
@@ -79,7 +79,7 @@ export class PlaceOrderComponent implements OnInit {
     this.snackBar.open(this.successMessage, '', { duration: 5000, verticalPosition: 'bottom', horizontalPosition: 'end', panelClass: ['green-snackbar'] });
   }
 
-  getControlValidationClasses(control: FormControl) {
+  getControlValidationClasses(control: FormControl): any {
     return {
       'is-invalid': control.touched && control.invalid,
       'is-valid': control.touched && control.valid

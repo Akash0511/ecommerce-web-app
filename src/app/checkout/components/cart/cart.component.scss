@@ -72,7 +72,7 @@
     text-align: left;
 }
 .item-price {
-    color: #9f9f9f;
+    color: black;
     font-size:16px;
     font-family: "Playfair Display";
     margin-top: 20px;
@@ -167,6 +167,7 @@
         float: left;
         padding-bottom: 15px;
         text-align: left;
+
     }
     .cart-item-total,
     .cart-item-action {
@@ -238,4 +239,8 @@
   input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
+  }
+
+  .delete{
+      color: red;
   }

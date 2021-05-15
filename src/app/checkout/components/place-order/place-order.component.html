@@ -11,11 +11,11 @@
                 <li class="list-group-item col-md-5">{{product.product.name}}</li>
                 <li class="list-group-item col-md-3"><span
                         class="badge badge-primary badge-pill">{{product.quantity}}</span></li>
-                <li class="list-group-item col-md-4">{{product.product.price * product.quantity}}</li>
+                <li class="list-group-item col-md-4">{{product.product.price * product.quantity | currency :'INR'}}</li>
             </ul>
             <ul class="list-group list-group-horizontal">
                 <li class="list-group-item col-md-8 head">{{ 'CHECKOUT.TOTAL' | translate }}</li>
-                <li class="list-group-item col-md-4 head">{{totalPrice}}</li>
+                <li class="list-group-item col-md-4 head">{{totalPrice | currency :'INR'}}</li>
             </ul>
         </div>
     </div>

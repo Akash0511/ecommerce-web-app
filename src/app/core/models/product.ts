@@ -9,4 +9,5 @@ export interface Product {
   features: string;
   imgUrl: string;
   quantity: number;
+  rating: number;
 }

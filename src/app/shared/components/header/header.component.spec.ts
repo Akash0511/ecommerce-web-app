@@ -7,6 +7,7 @@ import { HttpLoaderFactory } from 'src/app/app.module';
 import { AuthService } from 'src/app/core/services/auth.service';
 import { CartService } from 'src/app/core/services/cart.service';
 import { ProductService } from 'src/app/core/services/product.service';
+import { CategoryComponent } from '../category/category.component';
 import { SearchProductComponent } from '../search-product/search-product.component';
 
 import { HeaderComponent } from './header.component';
@@ -36,7 +37,8 @@ describe('HeaderComponent', () => {
       ],
       declarations: [
         HeaderComponent,
-        SearchProductComponent
+        SearchProductComponent,
+        CategoryComponent
       ]
     })
       .compileComponents();

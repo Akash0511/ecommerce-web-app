@@ -6,6 +6,10 @@
 <img class="image" height="400" mat-card-image src={{productInfo.imgUrl}} alt="Photo of a Product"
     (click)="viewProductDetail(productInfo.id)">
 <mat-card-content>
+    <div class="priceRating">
+        <h2>{{productInfo.price | currency : 'INR'}}</h2>
+        <app-rating [starRating]="productInfo.rating"></app-rating>
+    </div>
     <p>
         {{productInfo.description}}
     </p>

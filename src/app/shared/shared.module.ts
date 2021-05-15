@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { SearchProductComponent } from './components/search-product/search-product.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CategoryComponent } from './components/category/category.component';
 
 const components = [HeaderComponent, FooterComponent, SearchProductComponent];
 
@@ -13,7 +14,8 @@ const components = [HeaderComponent, FooterComponent, SearchProductComponent];
   declarations: [
     HeaderComponent,
     FooterComponent,
-    SearchProductComponent
+    SearchProductComponent,
+    CategoryComponent
   ],
   imports: [
     CommonModule,

@@ -6,10 +6,13 @@
     <div class="col-md-8 details">
       <div class="card-body">
         <h4 class="card-title">{{product.name}}</h4>
-        <h5 class="card-title">{{product.price}}</h5>
+        <div class="priceRating">
+          <h2>{{product.price | currency : 'INR'}}</h2>
+          <app-rating [starRating]="product.rating" class="ratings"></app-rating>
+        </div>
         <p class="card-text">{{product.description}}</p>
         <ul class="list-unstyled">
-          <li>Features:
+          <li>{{ 'PRODUCT_DETAILS.FEATURES' | translate }}
             <ul *ngFor="let feature of product.features" class="ul-data">
               <li>{{feature}}</li>
             </ul>

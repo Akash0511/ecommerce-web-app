@@ -23,6 +23,7 @@
                     <a class="dropdown-item" (click)="changeLang('hn')">{{ 'HEADER.SELECT_HINDI' | translate }}</a>
                 </div>
             </li>
+            <app-category></app-category>
 
         </ul>
         <app-search-product (searchText) = "searchTextHandler($event)"></app-search-product>

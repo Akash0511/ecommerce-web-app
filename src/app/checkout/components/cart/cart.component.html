@@ -10,7 +10,7 @@
                     <div class="cart-item-title">{{cart.product.name}}</div>
                 </div>
             </div>
-            <div class="cart-item-cell cart-item-quantity">
+            <div class="cart-item-cell cart-item-quantity plusminus">
                 <div class="number">
                     <input class="input-style" readonly type="number" value={{cart.quantity}}>
                 </div>
@@ -21,16 +21,16 @@
             </div>
             <div class="cart-item-cell cart-item-total">
                 <div class="item-price">
-                    {{cart.quantity*cart.product.price | currency :'USD' }}
+                    {{cart.quantity*cart.product.price | currency :'INR' }}
                 </div>
             </div>
             <div class="cart-item-cell cart-item-action">
-                <div class="item-remove" (click)="removeFromCart(i)"><mat-icon>delete</mat-icon></div>
+                <div class="item-remove" (click)="removeFromCart(i)"><mat-icon class="delete">delete</mat-icon></div>
             </div>
         </div>
         <div class="cart-buttons">
             <div class="continue-shopping"><a routerLink="/">{{ 'CART.CONTINUE_SHOPPING' | translate }}</a></div>
-            <button type="button" class="btn btn-success checkout-button" (click)="goToCheckout()">{{ 'CART.CHECKOUT_BUTTON' | translate }} ({{totalPrice | currency :'USD'}})</button>
+            <button type="button" class="btn btn-success checkout-button" (click)="goToCheckout()">{{ 'CART.CHECKOUT_BUTTON' | translate }} ({{totalPrice | currency :'INR'}})</button>
         </div>
     </div>
     <div class="cart-page-content" *ngIf="cartItems.length == 0">

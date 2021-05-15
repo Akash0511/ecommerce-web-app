@@ -50,7 +50,8 @@ describe('PlaceOrderComponent', () => {
           description: '',
           features: '',
           imgUrl: '',
-          quantity: 4
+          quantity: 4,
+          rating: 4.5
         },
         quantity: 1
       }

@@ -11,6 +11,7 @@
     "LOGOUT": "लॉग-आउट"
   },
   "PRODUCT_DETAILS":{
+    "FEATURES": "विशेषताएं:",
     "ADD_TO_CART_BUTTON":"कार्ट में जोड़ें",
     "VIEW_CART_BUTTON":"कार्ट देखें",
     "CANCEL_BUTTON":"रद्द करें",
@@ -67,7 +68,7 @@
     "PINCODE": "पिन कोड",
     "PINCODE_REQUIRED": "कृपया अपना पिन कोड दर्ज करें",
     "PINCODE_PATTERN": "केवल अंकों की अनुमति है",
-    "PLACEORDER": "ऑर्डर दें",
-    "CANCEL": "रद्द करना"
+    "PLACEORDER": "ऑर्डर करें",
+    "CANCEL": "रद्द करें"
   }
 }

@@ -10,8 +10,10 @@ import { of } from 'rxjs';
 import { HttpLoaderFactory } from 'src/app/app.module';
 import { Product } from 'src/app/core/models/product';
 import { CartService } from 'src/app/core/services/cart.service';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { ProductDetailPageComponent } from './product-detail-page.component';
+import { RatingComponent } from '../rating/rating.component';
 
 describe('ProductDetailPageComponent', () => {
   let component: ProductDetailPageComponent;
@@ -27,7 +29,7 @@ describe('ProductDetailPageComponent', () => {
           useValue:
           {
             data: {
-              subscribe: (func: (value: Data) => void)=> func({
+              subscribe: (func: (value: Data) => void) => func({
                 product: testProduct,
               }),
             }
@@ -36,7 +38,8 @@ describe('ProductDetailPageComponent', () => {
         CartService
       ],
       declarations: [
-        ProductDetailPageComponent
+        ProductDetailPageComponent,
+        RatingComponent
       ],
       imports: [
         RouterTestingModule,
@@ -49,7 +52,8 @@ describe('ProductDetailPageComponent', () => {
             deps: [HttpClient],
           },
         }),
-        HttpClientModule
+        HttpClientModule,
+        NgbModule
       ]
     })
       .compileComponents();
@@ -66,7 +70,8 @@ describe('ProductDetailPageComponent', () => {
       description: '',
       features: '',
       imgUrl: '',
-      quantity: 4
+      quantity: 4,
+      rating: 4.5
     };
 
     fixture = TestBed.createComponent(ProductDetailPageComponent);
@@ -88,8 +93,8 @@ describe('ProductDetailPageComponent', () => {
     component.viewCart();
     expect(navigateSpy).toHaveBeenCalledWith('/order/cart');
   });
- 
+
   it('should render each div for product details', () => {
-    expect(fixture.debugElement.queryAll(By.css('div')).length).toBe(5);
+    expect(fixture.debugElement.queryAll(By.css('div')).length).toBe(6);
   });
 });

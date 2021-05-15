@@ -21,16 +21,16 @@ describe('UserService', () => {
 
   const dummyUsers = [
     {
-      "userId": "1",
-      "userName": "abc@gmail.com",
-      "phone": "9890989098",
-      "password": "abcdef"
+      userId: '1',
+      userName: 'abc@gmail.com',
+      phone: '9890989098',
+      password: 'abcdef'
     },
     {
-      "userId": "2",
-      "userName": "xyz@gmail.com",
-      "phone": "8890989098",
-      "password": "xbcdef"
+      userId: '2',
+      userName: 'xyz@gmail.com',
+      phone: '8890989098',
+      password: 'xbcdef'
     }
   ];
 

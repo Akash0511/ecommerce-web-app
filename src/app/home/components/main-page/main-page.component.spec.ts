@@ -33,7 +33,10 @@ describe('MainPageComponent', () => {
         },
         ProductService
       ],
-      declarations: [MainPageComponent, GenerateProductComponent],
+      declarations: [
+        MainPageComponent,
+        GenerateProductComponent
+      ],
       imports: [
         RouterTestingModule,
         HttpClientModule,
@@ -63,8 +66,8 @@ describe('MainPageComponent', () => {
         description: '',
         features: '',
         imgUrl: '',
-        quantity: 4
-
+        quantity: 4,
+        rating: 4.5
       },
       {
         id: '2',
@@ -76,7 +79,8 @@ describe('MainPageComponent', () => {
         description: '',
         features: '',
         imgUrl: '',
-        quantity: 4
+        quantity: 4,
+        rating: 4.3
       }
     ];
     fixture = TestBed.createComponent(MainPageComponent);

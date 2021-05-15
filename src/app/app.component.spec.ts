@@ -5,6 +5,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { AppComponent } from './app.component';
 import { HttpLoaderFactory } from './app.module';
 import { NavigationService } from './core/services/navigation.service';
+import { CategoryComponent } from './shared/components/category/category.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { SearchProductComponent } from './shared/components/search-product/search-product.component';
@@ -30,7 +31,8 @@ describe('AppComponent', () => {
         AppComponent,
         HeaderComponent,
         FooterComponent,
-        SearchProductComponent
+        SearchProductComponent,
+        CategoryComponent
       ],
     }).compileComponents();
   });

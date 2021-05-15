@@ -66,7 +66,7 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  getControlValidationClasses(control: FormControl) {
+  getControlValidationClasses(control: FormControl): any {
     return {
       'is-invalid': control.touched && control.invalid,
       'is-valid': control.touched && control.valid
