@@ -6,37 +6,57 @@
                 "name": "Mobile"
             },
             {
-                "name": "Headphone"
+                "name": "Audio"
             },
             {
-                "name": "Mobile Accessories"
+                "name": "Laptop and Desktop"
             }
         ]
     },
     {
-        "name": "Fashion",
+        "name": "Home",
         "children": [
             {
-                "name": "Men",
+                "name": "Living room",
                 "children": [
                     {
-                        "name": "T-Shirt"
+                        "name": "Sofa beds"
                     },
                     {
-                        "name": "Footwear"
+                        "name": "Dining sets"
+                    },
+                    {
+                        "name": "Office chairs"
                     }
                 ]
             },
             {
-                "name": "Women",
+                "name": "Space saving",
                 "children": [
                     {
-                        "name": "Dresses"
+                        "name": "Kitchen trolley"
                     },
                     {
-                        "name": "Footwear"
+                        "name": "Portable laptop tables"
                     }
                 ]
+            }
+        ]
+    },
+    {
+        "name": "Appliances",
+        "children": [
+            {
+                "name": "Television"
+            },
+            {
+                "name": "Washing machines"
+            },
+            {
+                "name": "Air conditioners"
+            },
+            {
+                "name": "Refrigerators"
             }
         ]
     }

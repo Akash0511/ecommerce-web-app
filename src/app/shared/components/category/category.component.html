@@ -4,6 +4,9 @@
         Category
     </a>
     <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+        <div class="dropdown-item">
+            <div (click)="onProductCategorySelected('')">All</div>
+        </div>
         <div class="dropdown-submenu" *ngFor="let category of productCategoryData">
             <a class="dropdown-item" tabindex="-1">{{category.name}}</a>
             <div class="dropdown-menu" *ngIf="category.children">
@@ -18,7 +21,7 @@
                         </ul>
                     </li>
                     <div class="dropdown-item" *ngIf="!subCategory.children">
-                        <a tabindex="-1">{{subCategory.name}}</a>
+                        <div (click)="onProductCategorySelected(subCategory.name)">{{subCategory.name}}</div>
                     </div>
                 </div>
             </div>

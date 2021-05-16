@@ -42,7 +42,7 @@ export class ProductService {
   }
 
   public getProductDetailsByCategory(productCategory: string): void {
-    this.getAllProducts().pipe(
+    this.getProducts().pipe(
       map(items => items.filter(item => (
         item.category.toLowerCase()).includes(productCategory.toLowerCase())
       ))).subscribe(data => {
