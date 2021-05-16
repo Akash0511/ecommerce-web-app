@@ -1,59 +1,6 @@
 [
     {
         "id": "1",
-        "name": "Dr Smith Sofa Cum Bed",
-        "brand": "Dr Smith",
-        "color": "Blue",
-        "price": 6999,
-        "category": "Sofa beds",
-        "description": "Dr Smith Sofa Cum Bed 5x6 Three Seater Sofa Moshi Fabric - Perfect for Guests and Living Room Blue. This folding foam mattress doubles as a sleeper and a sofa, providing comfort seating and serving as a convenient guest mattress in one.",
-        "features": [
-            "sofa com bed furniture, sofa com bed furniture 5x6, sofa com bed furniture 6x6, sofa com bed furniture 4x6",
-            "Sofa cums bed furniture dimensions 5X6 Feet, Seating Capacity: three person comfortably",
-            "Primary Material: EPE Foam, Soft Foam and Fabric ; Upholstery Material: Moshi Fabric",
-            "Package Contains:- 1 Sofa cum Bed with Cover"
-        ],
-        "imgUrl": "assets/images/product-images/sofa_smith.jpg",
-        "quantity": 2,
-        "rating": 2
-    },
-    {
-        "id": "2",
-        "name": "Natraj Handicraft Dining Table",
-        "brand": "Natraj",
-        "color": "Brown Finish",
-        "price": 36999,
-        "category": "Dining sets",
-        "description": "Natraj Handicraft Solid Sheesham Wood 6 Seater Dining Table Set Dining Table with 6 Cushion Chairs for Dining Room Home for Hotel and Office.",
-        "features": [
-            "Product Dimensions Table: Length (68 inch), Width (35 inch), Height (29 inch), Chair: Length (17 inch), Width (17 inch), Height (41 inch).",
-            "This dining table set makes for a great addition to your home. | The set has an extremely modern and contemporary look that helps you set up a stylish dining space in your home.",
-            "The product requires basic self assembly at customers end and comes with self assembly instructions along with necessary accessories."
-        ],
-        "imgUrl": "assets/images/product-images/diningSet_Natraj.jpg",
-        "quantity": 6,
-        "rating": 2
-    },
-    {
-        "id": "3",
-        "name": "Wipro Furniture Contemporary",
-        "brand": "Wipro",
-        "color": "Black",
-        "price": 8199,
-        "category": "Office chairs",
-        "description": "Ergonomically engineered Synchro Tilt mechanism allowing users to tilt even while resting their feet on the floor. Fabric upholstered office chair with Adjustable Seat Height",
-        "features": [
-            "Product Dimensions: Chair Height (37-40 Inches), Seat Width (20 Inches), Seat Depth (21 Inches) , Seat Height (17-21 Inches)",
-            "Color: Black, Size: Medium Back",
-            "Warranty: 1 year limited warranty against manufacturing defects",
-            "Assembly Required: The product requires basic assembly and comes with DIY (Do-It-Yourself) assembly instructions"
-        ],
-        "imgUrl": "assets/images/product-images/officeChair_wipro.jpg",
-        "quantity": 16,
-        "rating": 4
-    },
-    {
-        "id": "4",
         "name": "Whirlpool 1.5 Ton Split AC",
         "brand": "Whirlpool",
         "color": "White",
@@ -71,7 +18,7 @@
         "rating": 3.8
     },
     {
-        "id": "5",
+        "id": "2",
         "name": "Whirlpool 325 Double Door",
         "brand": "Whirlpool",
         "color": "Omega Steel",
@@ -88,7 +35,7 @@
         "rating": 2.7
     },
     {
-        "id": "6",
+        "id": "3",
         "name": "Tribit Wireless Headphones",
         "brand": "Tribit",
         "color": "Black",
@@ -103,6 +50,59 @@
         "imgUrl": "assets/images/product-images/audio_tribit.jpg",
         "quantity": 24,
         "rating": 3.3
+    },
+    {
+        "id": "4",
+        "name": "Dr Smith Sofa Cum Bed",
+        "brand": "Dr Smith",
+        "color": "Blue",
+        "price": 6999,
+        "category": "Sofa beds",
+        "description": "Dr Smith Sofa Cum Bed 5x6 Three Seater Sofa Moshi Fabric - Perfect for Guests and Living Room Blue. This folding foam mattress doubles as a sleeper and a sofa, providing comfort seating and serving as a convenient guest mattress in one.",
+        "features": [
+            "sofa com bed furniture, sofa com bed furniture 5x6, sofa com bed furniture 6x6, sofa com bed furniture 4x6",
+            "Sofa cums bed furniture dimensions 5X6 Feet, Seating Capacity: three person comfortably",
+            "Primary Material: EPE Foam, Soft Foam and Fabric ; Upholstery Material: Moshi Fabric",
+            "Package Contains:- 1 Sofa cum Bed with Cover"
+        ],
+        "imgUrl": "assets/images/product-images/sofa_smith.jpg",
+        "quantity": 2,
+        "rating": 2
+    },
+    {
+        "id": "5",
+        "name": "Natraj Handicraft Dining Table",
+        "brand": "Natraj",
+        "color": "Brown Finish",
+        "price": 36999,
+        "category": "Dining sets",
+        "description": "Natraj Handicraft Solid Sheesham Wood 6 Seater Dining Table Set Dining Table with 6 Cushion Chairs for Dining Room Home for Hotel and Office.",
+        "features": [
+            "Product Dimensions Table: Length (68 inch), Width (35 inch), Height (29 inch), Chair: Length (17 inch), Width (17 inch), Height (41 inch).",
+            "This dining table set makes for a great addition to your home. | The set has an extremely modern and contemporary look that helps you set up a stylish dining space in your home.",
+            "The product requires basic self assembly at customers end and comes with self assembly instructions along with necessary accessories."
+        ],
+        "imgUrl": "assets/images/product-images/diningSet_Natraj.jpg",
+        "quantity": 6,
+        "rating": 2
+    },
+    {
+        "id": "6",
+        "name": "Wipro Furniture Contemporary",
+        "brand": "Wipro",
+        "color": "Black",
+        "price": 8199,
+        "category": "Office chairs",
+        "description": "Ergonomically engineered Synchro Tilt mechanism allowing users to tilt even while resting their feet on the floor. Fabric upholstered office chair with Adjustable Seat Height",
+        "features": [
+            "Product Dimensions: Chair Height (37-40 Inches), Seat Width (20 Inches), Seat Depth (21 Inches) , Seat Height (17-21 Inches)",
+            "Color: Black, Size: Medium Back",
+            "Warranty: 1 year limited warranty against manufacturing defects",
+            "Assembly Required: The product requires basic assembly and comes with DIY (Do-It-Yourself) assembly instructions"
+        ],
+        "imgUrl": "assets/images/product-images/officeChair_wipro.jpg",
+        "quantity": 16,
+        "rating": 4
     },
     {
         "id": "7",
