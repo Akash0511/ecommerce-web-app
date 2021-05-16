@@ -13,6 +13,7 @@
     },
     "PRODUCT_DETAILS":{
       "FEATURES": "Features:",
+      "ITEMS_LEFT": "Items left in stock: ",
       "ADD_TO_CART_BUTTON":"Add to cart",
       "VIEW_CART_BUTTON":"View cart",
       "CANCEL_BUTTON":"Cancel",
@@ -25,6 +26,7 @@
       "EMAIL_REQUIRED": "Please enter email",
       "VALID_EMAIL": "Please enter valid email",
       "PASSWORD_REQUIRED": "Please enter password",
+      "INVALID_CREDENTIAL_MESSAGE": "Invalid login credentials",
       "LOGIN_BUTTON": "Log-in"
     },
     "CART": {
@@ -32,6 +34,9 @@
       "CHECKOUT_BUTTON": "Checkout",
       "CART_EMPTY": "Your cart is empty.",
       "GO_SHOPPING": "Go Shopping"
+    },
+    "CATEGORY": {
+      "CATEGORY_SELECT": "Category"
     },
     "CHECKOUT": {
       "ORDER_DETAILS_HEADER":"Order details",

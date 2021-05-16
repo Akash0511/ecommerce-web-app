@@ -5,7 +5,11 @@
     margin: 0 auto;
     margin-top: 30px;
     width: 1000px;
-    height: 515px;
+    height: 550px;
+}
+
+.card-title{
+    font-weight: bold;
 }
 
 .details{
@@ -22,6 +26,11 @@
 .priceRating{
     display:flex;
     justify-content: space-between;
+}
+
+.productQuantity{
+    display:flex;
+    justify-content: left;
 }
 
 .ratings{

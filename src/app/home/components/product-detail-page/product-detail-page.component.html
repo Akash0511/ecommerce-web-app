@@ -1,14 +1,17 @@
 <div class="card mb-3">
   <div class="row no-gutters">
     <div class="col-md-4">
-      <img width="340" height="500px" src={{product.imgUrl}} alt="Photo of a Product">
+      <img width="340" height="500px" src={{product.imgUrl}} alt="Photo of a Product" style="border-radius: 15px;">
     </div>
     <div class="col-md-8 details">
       <div class="card-body">
         <h4 class="card-title">{{product.name}}</h4>
         <div class="priceRating">
-          <h2>{{product.price | currency : 'INR'}}</h2>
+          <h3>{{product.price | currency : 'INR'}}</h3>
           <app-rating [starRating]="product.rating" class="ratings"></app-rating>
+        </div>
+        <div class="productQuantity">
+          <h3>{{ 'PRODUCT_DETAILS.ITEMS_LEFT' | translate }} {{product.quantity}}</h3>
         </div>
         <p class="card-text">{{product.description}}</p>
         <ul class="list-unstyled">

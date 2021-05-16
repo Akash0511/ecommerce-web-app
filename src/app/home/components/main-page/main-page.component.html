@@ -1,6 +1,6 @@
 <div class="card-group">
     <mat-card class="example-card" *ngFor="let product of products | paginate: { id: 'grid_pagination',
-    itemsPerPage: 3,
+    itemsPerPage: 6,
     currentPage: page,
     totalItems: total }">
         <app-generate-product [productInfo]="product"></app-generate-product>

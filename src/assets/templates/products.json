@@ -1,58 +1,6 @@
 [
     {
         "id": "1",
-        "name": "M31 Dual Sim Phone",
-        "brand": "Samsung",
-        "color": "Navy Blue",
-        "price": 15000,
-        "category": "Mobile",
-        "description": "The Samsung Galaxy M series has gained a lot of popularity thanks to affordable prices and up-to-date hardware. Samsung has managed to lower prices by selling these models online, reducing distribution costs.",
-        "features": [
-            "Quad Camera Setup - 64MP (F1.8) Main Camera +8MP (F2.2) Ultra Wide Camera +5MP(F2.2) Depth Camera +5MP(F2.4) Macro Camera and 32MP (F2.0) front facing Camera",
-            "6.4-inch(16.21 centimeters) Super Amoled - Infinity U Cut Display , FHD+ Resolution (2340 x 1080) , 404 ppi pixel density and 16M color support",
-            "Android v10.0 operating system with 2.3GHz + 1.7GHz Exynos 9611 Octa core processor , 6GB RAM, 128GB internal memory expandable up to 512GB and dual SIM"
-        ],
-        "imgUrl": "assets/images/product-images/m31-samsung.jpg",
-        "quantity": 4,
-        "rating": 4.3
-    },
-    {
-        "id": "2",
-        "name": "Tribit Wireless Headphones",
-        "brand": "Tribit",
-        "color": "Black",
-        "price": 2599,
-        "category": "Audio",
-        "description": "the bluetooth headphones adopt Qualcomm chipset which keeps the headphone low power consumption. Bluetooth 5.0 Tech for easy connectivity and seamless audio/video syncs within 16m. Stay connected and easily switches between two Bluetooth devices at a time.",
-        "features": [
-            "The striking design of Tribit bluetooth headphones is matched by exhilarating sound, which is detailed, tonally balanced and blessed with a large dose of rhythmic precision.",
-            "In Bluetooth Mode, the bluetooth headphone supports up to 24 hrs music time in 2 hours charge. In a hurry? A ten minute USB quick-charge will breathe 4 hour's life into the battery.",
-            "CVC8.0 noise cancelling technology offers faster processing speed with less distortion. Enjoy clear calls even in windy or noisy environments while making your voice sound clearer at the other end with Tribit bluetooth headphone over ear."
-        ],
-        "imgUrl": "assets/images/product-images/audio_tribit.jpg",
-        "quantity": 24,
-        "rating": 3.3
-    },
-    {
-        "id": "3",
-        "name": "Lenovo ThinkPad E14",
-        "brand": "Lenovo",
-        "color": "Black",
-        "price": 64736,
-        "category": "Laptop and Desktop",
-        "description": "Intel Core i5 10th Gen 14-inch Full HD Thin and Light Laptop (8GB RAM/ 1TB HDD + 128GB SSD/ Windows 10 Home/ Microsoft Office Home & Student 2019/ Black/ 1.69 kg). ThinkPad Reliability (12 Military Specifications Certified) | Built to withstand rugged usage and can handle accidental knocks, drops, and even spills",
-        "features": [
-            "Processor: 10th Gen Intel Core i5-10210U processor, 1.6Ghz base speed, 4.2Ghz max speed, 4Cores, 6Mb Smart Cache.",
-            "Operating System: Pre-loaded Windows 10 Home with lifetime validity.",
-            "Display: 14-inch screen with (1920X1080) Full HD Display | Anti Glare technology | 720p HD Camera with Thinkshutter | Connectivity: Intel AX201 11ax, 2x2 + BT5.0 | Audio: Skype-certified mics and 2x 2W Harman speakers with Dolby Advanced Audio | Dual array microphone.",
-            "Memory: 8GB RAM | Storage: 1TB HDD + 128GB SSD"
-        ],
-        "imgUrl": "assets/images/product-images/laptop_lenovo.jpg",
-        "quantity": 3,
-        "rating": 5
-    },
-    {
-        "id": "4",
         "name": "Dr Smith Sofa Cum Bed",
         "brand": "Dr Smith",
         "color": "Blue",
@@ -70,7 +18,7 @@
         "rating": 2
     },
     {
-        "id": "5",
+        "id": "2",
         "name": "Natraj Handicraft Dining Table",
         "brand": "Natraj",
         "color": "Brown Finish",
@@ -87,7 +35,7 @@
         "rating": 2
     },
     {
-        "id": "6",
+        "id": "3",
         "name": "Wipro Furniture Contemporary",
         "brand": "Wipro",
         "color": "Black",
@@ -105,77 +53,7 @@
         "rating": 4
     },
     {
-        "id": "7",
-        "name": "Twinrle Kitchen Trolly",
-        "brand": "Twinrle",
-        "color": "steel",
-        "price": 2999,
-        "category": "Kitchen trolley",
-        "description": "Kitchen Trolley Multipurpose Stainless Steel 3 Layer Portable Storage Rack | trolley with wheels for kitchen storage | vegetable trolley for kitchen",
-        "features": [
-            "Material : 100% stainless steel",
-            "It's storage solution for your kitchen to store fruits, vegetables etc",
-            "MULTIPURPOSE : Electreca trolley can be used for multi purposes, like storing fruits and vegetables,keeping books,or any other cosmetic items or cookware items and house products!",
-            "Made in India"
-        ],
-        "imgUrl": "assets/images/product-images/kitchenTrolly_twinrle.jpg",
-        "quantity": 8,
-        "rating": 3
-    },
-    {
-        "id": "8",
-        "name": "Callas Foldable Laptop Table",
-        "brand": "Callas",
-        "color": "Black",
-        "price": 1499,
-        "category": "Portable laptop tables",
-        "description": "Callas Multipurpose Foldable Laptop Table with Cup Holder | Drawer | Mac Holder | Table Holder Study Table, Breakfast Table, Foldable and Portable/Ergonomic & Rounded Edges/Non-Slip Legs",
-        "features": [
-            "Callas Bed Table Built-in iPad stand groove for holding ipad or kindle.And desk comes with a table cup holder to store cups well. The Anti-Slip Sponge can keep your laptop safe while tilted, and provide you comfort and stability while using.",
-            "The metal legs are foldable, easily fold flat for convenient storage when you don't need it.There are handles on the table, you can easily take the table to any place you want to use it.It is very lightweight, easy to carry and play.Go out camping is also an ideal choice"
-        ],
-        "imgUrl": "assets/images/product-images/laptopTable_callas.jpg",
-        "quantity": 30,
-        "rating": 2
-    },
-    {
-        "id": "9",
-        "name": "Mi 80 cm Smart LED TV",
-        "brand": "MI",
-        "color": "Black",
-        "price": 14999,
-        "category": "Television",
-        "description": "Packing powerful 64-bit A53 Quad-core processor, Mi’s LED TV is a perfect addition to your home. With powerful speakers and HD-ready display, this appliance is sure to offer you an immersive audio-video experience.Packing powerful 64-bit A53 Quad-core processor, Mi’s LED TV is a perfect addition to your home..",
-        "features": [
-            "Resolution: HD Ready Android TV (1366x768) | Refresh Rate: 60 hertz",
-            "Connectivity: 3 HDMI ports to connect set top box, Blu Ray players, gaming console | 2 USB ports to connect hard drives and other USB devices",
-            "Sound: 20 Watts Output | Dolby+ DTS-HD",
-            "Smart TV Features : Built-In Wi-Fi | PatchWall | Netflix | Prime Video | Disney+Hotstar and more | Android TV 9.0 | Google Assistant"
-        ],
-        "imgUrl": "assets/images/product-images/television_MI.jpg",
-        "quantity": 4,
-        "rating": 4.6
-    },
-    {
-        "id": "10",
-        "name": "LG Automatic Washing Machine",
-        "brand": "LG",
-        "color": "Dark Grey",
-        "price": 16999,
-        "category": "Washing machines",
-        "description": "Semi-automatic washing Machine: Economical, Low water and energy consumption, involves manual effort; Has both washing and drying functions",
-        "features": [
-            "Capacity 7.0 kg (wash): Suitable for large families",
-            "1350 RPM: higher spin speeds helps in faster drying",
-            "Special features : Spin tub capacity 5.5 kg, Normal pulsator, Rat away feature, Mech. Control method, Wash timer 15 minutes, Wind jet dry",
-            "Manufacturer Warranty: 2 Years Comprehensive & 5 years on Motor T&C"
-        ],
-        "imgUrl": "assets/images/product-images/washingMachine_LG.jpg",
-        "quantity": 8,
-        "rating": 4.1
-    },
-    {
-        "id": "11",
+        "id": "4",
         "name": "Whirlpool 1.5 Ton Split AC",
         "brand": "Whirlpool",
         "color": "White",
@@ -193,7 +71,7 @@
         "rating": 3.8
     },
     {
-        "id": "12",
+        "id": "5",
         "name": "Whirlpool 325 Double Door",
         "brand": "Whirlpool",
         "color": "Omega Steel",
@@ -208,5 +86,127 @@
         "imgUrl": "assets/images/product-images/refrigerator_whirlpool.jpg",
         "quantity": 12,
         "rating": 2.7
+    },
+    {
+        "id": "6",
+        "name": "Tribit Wireless Headphones",
+        "brand": "Tribit",
+        "color": "Black",
+        "price": 2599,
+        "category": "Audio",
+        "description": "the bluetooth headphones adopt Qualcomm chipset which keeps the headphone low power consumption. Bluetooth 5.0 Tech for easy connectivity and seamless audio/video syncs within 16m. Stay connected and easily switches between two Bluetooth devices at a time.",
+        "features": [
+            "The striking design of Tribit bluetooth headphones is matched by exhilarating sound, which is detailed, tonally balanced and blessed with a large dose of rhythmic precision.",
+            "In Bluetooth Mode, the bluetooth headphone supports up to 24 hrs music time in 2 hours charge. In a hurry? A ten minute USB quick-charge will breathe 4 hour's life into the battery.",
+            "CVC8.0 noise cancelling technology offers faster processing speed with less distortion. Enjoy clear calls even in windy or noisy environments while making your voice sound clearer at the other end with Tribit bluetooth headphone over ear."
+        ],
+        "imgUrl": "assets/images/product-images/audio_tribit.jpg",
+        "quantity": 24,
+        "rating": 3.3
+    },
+    {
+        "id": "7",
+        "name": "M31 Dual Sim Phone",
+        "brand": "Samsung",
+        "color": "Navy Blue",
+        "price": 15000,
+        "category": "Mobile",
+        "description": "The Samsung Galaxy M series has gained a lot of popularity thanks to affordable prices and up-to-date hardware. Samsung has managed to lower prices by selling these models online, reducing distribution costs.",
+        "features": [
+            "Quad Camera Setup - 64MP (F1.8) Main Camera +8MP (F2.2) Ultra Wide Camera +5MP(F2.2) Depth Camera +5MP(F2.4) Macro Camera and 32MP (F2.0) front facing Camera",
+            "6.4-inch(16.21 centimeters) Super Amoled - Infinity U Cut Display , FHD+ Resolution (2340 x 1080) , 404 ppi pixel density and 16M color support",
+            "Android v10.0 operating system with 2.3GHz + 1.7GHz Exynos 9611 Octa core processor , 6GB RAM, 128GB internal memory expandable up to 512GB and dual SIM"
+        ],
+        "imgUrl": "assets/images/product-images/m31-samsung.jpg",
+        "quantity": 4,
+        "rating": 4.3
+    },
+    {
+        "id": "8",
+        "name": "Lenovo ThinkPad E14",
+        "brand": "Lenovo",
+        "color": "Black",
+        "price": 64736,
+        "category": "Laptop and Desktop",
+        "description": "Intel Core i5 10th Gen 14-inch Full HD Thin and Light Laptop (8GB RAM/ 1TB HDD + 128GB SSD/ Windows 10 Home/ Microsoft Office Home & Student 2019/ Black/ 1.69 kg). ThinkPad Reliability (12 Military Specifications Certified) | Built to withstand rugged usage and can handle accidental knocks, drops, and even spills",
+        "features": [
+            "Processor: 10th Gen Intel Core i5-10210U processor, 1.6Ghz base speed, 4.2Ghz max speed, 4Cores, 6Mb Smart Cache.",
+            "Operating System: Pre-loaded Windows 10 Home with lifetime validity.",
+            "Display: 14-inch screen with (1920X1080) Full HD Display | Anti Glare technology | 720p HD Camera with Thinkshutter | Connectivity: Intel AX201 11ax, 2x2 + BT5.0 | Audio: Skype-certified mics and 2x 2W Harman speakers with Dolby Advanced Audio | Dual array microphone.",
+            "Memory: 8GB RAM | Storage: 1TB HDD + 128GB SSD"
+        ],
+        "imgUrl": "assets/images/product-images/laptop_lenovo.jpg",
+        "quantity": 3,
+        "rating": 5
+    },
+    {
+        "id": "9",
+        "name": "Twinrle Kitchen Trolly",
+        "brand": "Twinrle",
+        "color": "steel",
+        "price": 2999,
+        "category": "Kitchen trolley",
+        "description": "Kitchen Trolley Multipurpose Stainless Steel 3 Layer Portable Storage Rack | trolley with wheels for kitchen storage | vegetable trolley for kitchen",
+        "features": [
+            "Material : 100% stainless steel",
+            "It's storage solution for your kitchen to store fruits, vegetables etc",
+            "MULTIPURPOSE : Electreca trolley can be used for multi purposes, like storing fruits and vegetables,keeping books,or any other cosmetic items or cookware items and house products!",
+            "Made in India"
+        ],
+        "imgUrl": "assets/images/product-images/kitchenTrolly_twinrle.jpg",
+        "quantity": 8,
+        "rating": 3
+    },
+    {
+        "id": "10",
+        "name": "Callas Foldable Laptop Table",
+        "brand": "Callas",
+        "color": "Black",
+        "price": 1499,
+        "category": "Portable laptop tables",
+        "description": "Callas Multipurpose Foldable Laptop Table with Cup Holder | Drawer | Mac Holder | Table Holder Study Table, Breakfast Table, Foldable and Portable/Ergonomic & Rounded Edges/Non-Slip Legs",
+        "features": [
+            "Callas Bed Table Built-in iPad stand groove for holding ipad or kindle.And desk comes with a table cup holder to store cups well. The Anti-Slip Sponge can keep your laptop safe while tilted, and provide you comfort and stability while using.",
+            "The metal legs are foldable, easily fold flat for convenient storage when you don't need it.There are handles on the table, you can easily take the table to any place you want to use it.It is very lightweight, easy to carry and play.Go out camping is also an ideal choice"
+        ],
+        "imgUrl": "assets/images/product-images/laptopTable_callas.jpg",
+        "quantity": 30,
+        "rating": 2
+    },
+    {
+        "id": "11",
+        "name": "Mi 80 cm Smart LED TV",
+        "brand": "MI",
+        "color": "Black",
+        "price": 14999,
+        "category": "Television",
+        "description": "Packing powerful 64-bit A53 Quad-core processor, Mi’s LED TV is a perfect addition to your home. With powerful speakers and HD-ready display, this appliance is sure to offer you an immersive audio-video experience.Packing powerful 64-bit A53 Quad-core processor, Mi’s LED TV is a perfect addition to your home..",
+        "features": [
+            "Resolution: HD Ready Android TV (1366x768) | Refresh Rate: 60 hertz",
+            "Connectivity: 3 HDMI ports to connect set top box, Blu Ray players, gaming console | 2 USB ports to connect hard drives and other USB devices",
+            "Sound: 20 Watts Output | Dolby+ DTS-HD",
+            "Smart TV Features : Built-In Wi-Fi | PatchWall | Netflix | Prime Video | Disney+Hotstar and more | Android TV 9.0 | Google Assistant"
+        ],
+        "imgUrl": "assets/images/product-images/television_MI.jpg",
+        "quantity": 4,
+        "rating": 4.6
+    },
+    {
+        "id": "12",
+        "name": "LG Automatic Washing Machine",
+        "brand": "LG",
+        "color": "Dark Grey",
+        "price": 16999,
+        "category": "Washing machines",
+        "description": "Semi-automatic washing Machine: Economical, Low water and energy consumption, involves manual effort; Has both washing and drying functions",
+        "features": [
+            "Capacity 7.0 kg (wash): Suitable for large families",
+            "1350 RPM: higher spin speeds helps in faster drying",
+            "Special features : Spin tub capacity 5.5 kg, Normal pulsator, Rat away feature, Mech. Control method, Wash timer 15 minutes, Wind jet dry",
+            "Manufacturer Warranty: 2 Years Comprehensive & 5 years on Motor T&C"
+        ],
+        "imgUrl": "assets/images/product-images/washingMachine_LG.jpg",
+        "quantity": 8,
+        "rating": 4.1
     }
 ]

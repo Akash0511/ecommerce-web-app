@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Subscription } from 'rxjs';
+import { TranslateService } from '@ngx-translate/core';
 import { LoginDetails } from 'src/app/core/models/loginDetails';
 import { AuthService } from 'src/app/core/services/auth.service';
 import { NavigationService } from 'src/app/core/services/navigation.service';
@@ -16,6 +16,8 @@ export class LoginComponent implements OnInit {
 
   previousUrl = '';
 
+  invalidCredentialmessage!: string;
+
   loginForm!: FormGroup;
 
   emailControl!: FormControl;
@@ -25,7 +27,8 @@ export class LoginComponent implements OnInit {
     private authService: AuthService,
     private router: Router,
     private readonly userService: UserService,
-    private readonly navigationService: NavigationService) { }
+    private readonly navigationService: NavigationService,
+    private readonly translateService: TranslateService) { }
 
   imgUrl = '../../../../assets/images/loginLogo.png';
 
@@ -58,7 +61,7 @@ export class LoginComponent implements OnInit {
           console.log(error);
         });
       } else {
-        console.log('Invalid login credentials');
+        this.invalidCredentialmessage = this.translateService.instant('LOGIN.INVALID_CREDENTIAL_MESSAGE');
         this.loginForm.reset();
       }
     }, (error) => {

@@ -13,6 +13,7 @@
   },
   "PRODUCT_DETAILS":{
     "FEATURES": "विशेषताएं:",
+    "ITEMS_LEFT": "स्टॉक में आइटम शेष: ",
     "ADD_TO_CART_BUTTON":"कार्ट में जोड़ें",
     "VIEW_CART_BUTTON":"कार्ट देखें",
     "CANCEL_BUTTON":"रद्द करें",
@@ -25,6 +26,7 @@
     "EMAIL_REQUIRED": "कृपया ईमेल दर्ज करें",
     "VALID_EMAIL": "कृपया वैध ईमेल दर्ज़ करें",
     "PASSWORD_REQUIRED": "कृप्या पास्वर्ड भरो",
+    "INVALID_CREDENTIAL_MESSAGE": "अमान्य लॉग-इन ईमेल/पास्वर्ड",
     "LOGIN_BUTTON": "लॉग-इन"
   },
   "CART": {
@@ -32,6 +34,9 @@
     "CHECKOUT_BUTTON": "चेक आउट",
     "CART_EMPTY": "आपकी कार्ट खाली है।",
     "GO_SHOPPING": "खरीदारी करें"
+  },
+  "CATEGORY": {
+    "CATEGORY_SELECT": "श्रेणी"
   },
   "CHECKOUT": {
     "ORDER_DETAILS_HEADER":"ऑर्डर का विवरण",
